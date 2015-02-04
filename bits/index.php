@@ -6,7 +6,7 @@
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
 
-    $app['banner'] = "<b>HELP US:</b> Try SVN and beta test!";
+    $app['banner'] = "<b>HELP US:</b> Try our development version and beta test!";
     $app['bannerurl'] = "/devel";
 
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
@@ -38,6 +38,7 @@
     $app['platforms'] = array('windows' => 0, 'linux' => 0, 'macosx' => 0, 'arch' => 1, 'chakra' => 1, 'debian' => 1, 'slackware' => 1, 'gentoo' => 1);
 
     $app['targets']['svn'] = array('name' => 'SVN', 'url' => 'http://svn.icculus.org/redeclipse/', 'alturl' => 'http://svn.icculus.org/redeclipse/?view=rev&revision=', 'nav' => -1, 'redir' => 1);
+    $app['targets']['git'] = array('name' => 'GIT', 'url' => 'https://github.com/red-eclipse/', 'alturl' => 'https://github.com/red-eclipse/', 'nav' => -1, 'redir' => 1);
     $app['targets']['apply'] = array('name' => 'Apply', 'url' => 'http://docs.google.com/forms/d/1ZuvNFCIivYY_b5YLpCa_pnsbdR4oRdPplIkcbBexCDU/viewform', 'nav' => -1, 'redir' => 1);
     $app['targets']['guidelines'] = array('name' => 'Guidelines', 'url' => 'http://redeclipse.net/wiki/Multiplayer_Guidelines', 'nav' => -1, 'redir' => 1);
     $app['targets']['trademark'] = array('name' => 'Trademark', 'url' => 'http://redeclipse.net/wiki/Trademark_Policy', 'nav' => -1, 'redir' => 1);
@@ -161,7 +162,7 @@
                             $m = 0;
                         } ?>
                     </p>
-                    <p id="svn">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
+                    <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
                 <div id="player">
                     <object width="500" height="308" type="application/x-shockwave-flash" data="http://www.youtube.com/v/<?php echo $app['youtubevid']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;showsearch=0&amp;showinfo=0&amp;ap=%2526fmt%3D18">
