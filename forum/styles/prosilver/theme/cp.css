@@ -350,14 +350,6 @@ dl.mini dd {
 	padding-top: 4px;
 }
 
-.friend-online {
-	font-weight: bold;
-}
-
-.friend-offline {
-	font-style: italic;
-}
-
 /* PM Styles
 ----------------------------------------*/
 #pm-menu {

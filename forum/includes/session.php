@@ -1497,7 +1497,22 @@ class session
 *
 * @package phpBB3
 */
-class user extends session
+if (!defined('FROM_MEDIAWIKI')) {
+	class user extends __user {
+		function __construct() {
+			parent::user();
+		}
+	}
+} else {
+	class phpbb_user extends __user {
+		function __construct() {
+			parent::user();
+		}
+	}
+}
+
+//class user extends session
+class __user extends session
 {
 	var $lang = array();
 	var $help = array();
@@ -1823,6 +1838,9 @@ class user extends session
 				add_log('admin', 'LOG_IMAGESET_LANG_MISSING', $this->theme['imageset_name'], $this->img_lang);
 			}
 		}
+
+		include_once($phpbb_root_path . 'includes/mobile.' . $phpEx);
+		phpbb_mobile::setup('mobile');
 
 		// Call phpbb_user_session_handler() in case external application want to "bend" some variables or replace classes...
 		// After calling it we continue script execution...

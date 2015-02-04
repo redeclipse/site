@@ -14,7 +14,7 @@ a:active	{ color: #d2d2d2; text-decoration: none; }
 
 /* Coloured usernames */
 .username-coloured {
-	font-weight: bold;
+	font-weight: normal;
 	display: inline !important;
 	padding: 0 !important;
 }
@@ -107,7 +107,7 @@ a.topictitle:active {
 
 /* Profile links */
 .postprofile a:link, .postprofile a:visited, .postprofile dt.author a {
-	font-weight: bold;
+	font-weight: normal;
 	color: #898989;
 	text-decoration: none;
 }
@@ -120,7 +120,7 @@ a.topictitle:active {
 /* CSS spec requires a:link, a:visited, a:hover and a:active rules to be specified in this order. */
 /* See http://www.phpbb.com/bugs/phpbb3/59685 */
 .postprofile a:active {
-	font-weight: bold;
+	font-weight: normal;
 	color: #898989;
 	text-decoration: none;
 }

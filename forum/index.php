@@ -135,6 +135,15 @@ $template->assign_vars(array(
 	'U_MCP'				=> ($auth->acl_get('m_') || $auth->acl_getf_global('m_')) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=main&amp;mode=front', true, $user->session_id) : '')
 );
 
+if ($config['rt_index'])
+{
+	if (!function_exists('display_recent_topics'))
+	{
+		include($phpbb_root_path . 'includes/functions_recenttopics.' . $phpEx);
+	}
+	display_recent_topics($config['rt_number'], $config['rt_page_number'], $config['rt_anti_topics'], 'recent_topics', request_var('f', 0), true, $config['rt_parents']);
+}
+
 // Output page
 page_header($user->lang['INDEX']);
 

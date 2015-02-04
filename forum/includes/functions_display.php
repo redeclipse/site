@@ -109,6 +109,13 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		$sql_array['SELECT'] .= ', fa.user_id';
 	}
 
+	if (!class_exists('phpbb_mods_advanced_last_topic_titles'))
+	{
+		include($phpbb_root_path . 'includes/mods/advanced_last_topic_titles.' . $phpEx);
+	}
+	phpbb_mods_advanced_last_topic_titles::initialise();
+	$sql_array = phpbb_mods_advanced_last_topic_titles::inject_sql($sql_array);
+
 	$sql = $db->sql_build_query('SELECT', array(
 		'SELECT'	=> $sql_array['SELECT'],
 		'FROM'		=> $sql_array['FROM'],
@@ -139,6 +146,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 	while ($row = $db->sql_fetchrow($result))
 	{
 		$forum_id = $row['forum_id'];
+		$row = phpbb_mods_advanced_last_topic_titles::inject_forum_row($row);
 
 		// Mark forums read?
 		if ($mark_read == 'forums')
@@ -269,6 +277,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 				$forum_rows[$parent_id]['forum_last_poster_name'] = $row['forum_last_poster_name'];
 				$forum_rows[$parent_id]['forum_last_poster_colour'] = $row['forum_last_poster_colour'];
 				$forum_rows[$parent_id]['forum_id_last_post'] = $forum_id;
+				$forum_rows = phpbb_mods_advanced_last_topic_titles::inject_forum_row_values($forum_rows, $parent_id, $row);
 			}
 		}
 	}
@@ -497,6 +506,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 			'U_LAST_POSTER'		=> get_username_string('profile', $row['forum_last_poster_id'], $row['forum_last_poster_name'], $row['forum_last_poster_colour']),
 			'U_LAST_POST'		=> $last_post_url)
 		);
+		phpbb_mods_advanced_last_topic_titles::display_information($row);
 
 		// Assign subforums loop for style authors
 		foreach ($subforums_list as $subforum)

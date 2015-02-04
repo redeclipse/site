@@ -20,7 +20,7 @@
 	<tr class="<!-- IF admin.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
 		<td><!-- IF admin.RANK_IMG --><span class="rank-img">{admin.RANK_IMG}</span><!-- ELSE --><span class="rank-img">{admin.RANK_TITLE}</span><!-- ENDIF -->{admin.USERNAME_FULL}</td>
 		<td class="info"><!-- IF admin.U_GROUP -->
-			<a<!-- IF admin.GROUP_COLOR --> style="font-weight: bold; color:#{admin.GROUP_COLOR}"<!-- ENDIF --> href="{admin.U_GROUP}">{admin.GROUP_NAME}</a>
+			<a<!-- IF admin.GROUP_COLOR --> style="font-weight: normal; color:#{admin.GROUP_COLOR}"<!-- ENDIF --> href="{admin.U_GROUP}">{admin.GROUP_NAME}</a>
 			<!-- ELSE -->
 				{admin.GROUP_NAME}
 			<!-- ENDIF --></td>
@@ -53,7 +53,7 @@
 	<tr class="<!-- IF mod.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
 		<td><!-- IF mod.RANK_IMG --><span class="rank-img">{mod.RANK_IMG}</span><!-- ELSE --><span class="rank-img">{mod.RANK_TITLE}</span><!-- ENDIF -->{mod.USERNAME_FULL}</td>
 		<td class="info"><!-- IF mod.U_GROUP -->
-			<a<!-- IF mod.GROUP_COLOR --> style="font-weight: bold; color:#{mod.GROUP_COLOR}"<!-- ENDIF --> href="{mod.U_GROUP}">{mod.GROUP_NAME}</a>
+			<a<!-- IF mod.GROUP_COLOR --> style="font-weight: normal; color:#{mod.GROUP_COLOR}"<!-- ENDIF --> href="{mod.U_GROUP}">{mod.GROUP_NAME}</a>
 			<!-- ELSE -->
 				{mod.GROUP_NAME}
 			<!-- ENDIF --></td>
