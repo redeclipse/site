@@ -1,0 +1,17 @@
+Options -Indexes
+
+php_value upload_max_filesize 8M
+php_value post_max_size 8M
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.redeclipse.net$ [OR,NC]
+RewriteCond %{HTTP_HOST} ^play.redeclipse.net$
+RewriteRule ^(.*)$ http://redeclipse.net/$1 [R=301,L,NC]
+
+RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/mediawiki/index.php [QSA,L,NC]
+
+RewriteRule ^(download|tracker|svn|google|facebook|youtube)/(.+)$ /bits/index.php?target=$1&title=$2 [QSA,L,NC]
+RewriteRule ^(home|tracker|servers|download|chat|svn|google|facebook|youtube|itchio|desura|indiedb|arch|chakra|debian|slackware|gentoo|install|devel|guidelines|faq|trademark|license|readme|apply|donate|forums)$ /bits/index.php?target=$1 [QSA,L,NC]
+RewriteRule ^(sitemap|sitemap.xml)$ /bits/sitemap.xml [QSA,L,NC]
+RewriteRule ^favicon.ico$ /bits/favicon.ico [QSA,L,NC]
+RewriteRule ^$ /bits/index.php [QSA,L,NC]
