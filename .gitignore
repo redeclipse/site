@@ -21,3 +21,4 @@ mediawiki/cache/*
 mediawiki/images/*
 !mediawiki/images/.htaccess
 mediawiki/mediawiki
+files/*
