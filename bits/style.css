@@ -1,12 +1,12 @@
 @charset "utf-8"; body { margin: 0px; padding: 0px; font: 14px sans-serif; }
-img { border: 0; }
+img { border: 0px; }
 h1 { color: #ffffff; display: block; float: left; margin: 0px 0px 16px 0px; padding: 0px; font: bold 28px "Trebuchet MS", Arial, Helvetica, sans-serif; text-shadow: 0px 0px 32px #ff4444; }
 h2 { color: #bb1111; display: block; float: left; margin: 8px 0px 16px 0px; padding: 0px; font: bold normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif; text-shadow: 0px 0px 24px #666666; }
 h3 { font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF; background: url(/bits/sprite.png) no-repeat -860px -777px; display: block; float: left; margin: 0px 0px 10px; padding: 0px 0px 0px 20px; width: 390px; }
 h4 { font: bold 21px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF; margin: 0px 0px 10px; padding: 0px; text-shadow: 0px 0px 15px #ff3333;}
 #container { margin: 0px auto; width: 980px; padding: 0px; }
 #main { margin: 5px 0px 0px 30px; width: 410px; float: left; }
-#button { font: bold normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF; background: url(/bits/sprite.png) no-repeat -690px -1126px; margin: 0px 0px 0px 65px; padding: 12px 0px 0px 98px; float: left; height: 64px; width: 176px; text-decoration: none; text-shadow: -1px -1px 1px #773a00; }
+#button { display: inline; font: bold normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF; background: url(/bits/sprite.png) no-repeat -690px -1126px; margin: 0px 0px 0px 65px; padding: 12px 0px 0px 98px; float: left; height: 64px; width: 176px; text-decoration: none; text-shadow: -1px -1px 1px #773a00; }
 #rel, #devel, #digidist, #mirror { font: 12px Arial, Helvetica, sans-serif; color: #dfbfb7; margin: 0px; padding: 5px 0px 0px; float: left; width: 402px; text-align: center; }
 #rel a, #devel a, #digidist a,  #mirror a { color: #FFFFFF; border-bottom: 1px dotted #FFFFFF; text-decoration: none; }
 #rel a:hover, #devel a:hover, #digidist a:hover, #mirror a:hover { color: #FFFFFF; text-decoration: none; border-bottom: 1px solid #FFFFFF; }
