@@ -183,7 +183,7 @@
                     </p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
-                <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" style="border: 0px" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;allowfullscreen=true" allowfullscreen ></iframe></div>
+                <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" style="border: 0px" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;allowfullscreen=true" allowfullscreen></iframe></div>
             </div>
             <div class="endblock">&nbsp;</div>
             <div class="sliderblock">
@@ -199,7 +199,7 @@
                                 $c = false;
                             }
                             $k = $f < 10 ? "00".$f."" : "0".$f."";
-                            echo "<a href=\"/bits/images/".$k.".jpg\"><img src=\"/bits/thumbs/".$k.".jpg\" width=\"180\" height=\"102\" border=\"0\" alt=\"Screenshot ".$k."\" /></a>";
+                            echo "<a href=\"/bits/images/".$k.".jpg\"><img src=\"/bits/thumbs/".$k.".jpg\" width=\"180\" height=\"102\" alt=\"Screenshot ".$k."\" /></a>";
                             if ($j == 3) {
                                 echo "</li>";
                                 $c = true;
