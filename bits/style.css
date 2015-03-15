@@ -1,4 +1,5 @@
 @charset "utf-8"; body { margin: 0px; padding: 0px; font: 14px sans-serif; }
+img { border: 0; }
 h1 { color: #ffffff; display: block; float: left; margin: 0px 0px 16px 0px; padding: 0px; font: bold 28px "Trebuchet MS", Arial, Helvetica, sans-serif; text-shadow: 0px 0px 32px #ff4444; }
 h2 { color: #bb1111; display: block; float: left; margin: 8px 0px 16px 0px; padding: 0px; font: bold normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif; text-shadow: 0px 0px 24px #666666; }
 h3 { font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF; background: url(/bits/sprite.png) no-repeat -860px -777px; display: block; float: left; margin: 0px 0px 10px; padding: 0px 0px 0px 20px; width: 390px; }

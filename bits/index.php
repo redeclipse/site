@@ -75,8 +75,8 @@
             }
         }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
     <head>
         <title>Red Eclipse: <?php echo ($app['targets'][$app['target']]['name'] != "" ? $app['targets'][$app['target']]['name'] : "Home"); ?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -146,14 +146,14 @@
             ga('send', 'pageview');
         </script>
     </head>
-    <body style="background: url(/bits/bg2.jpg) no-repeat center top, #282828 url(/bits/bg1.jpg) repeat-x" bgcolor="#333">
+    <body style="background-colour: #333333; background: url(/bits/bg2.jpg) no-repeat center top, #282828 url(/bits/bg1.jpg) repeat-x">
 		<div id="container">
             <div id="banner"><a href="<?php echo $app['bannerurl']; ?>"><?php echo $app['banner']; ?></a></div>
             <div id="links"><?php echo $app['navbar']; ?></div>
             <div id="header">
-                <a href="/home"><img src="/bits/lightbox-blank.gif" alt="Red Eclipse" width="450" height="143" border="0" align="left" title="Red Eclipse" /></a>
-                <a href="http://www.cubeengine.com/"><img src="/bits/lightbox-blank.gif" alt="Built on Cube Engine 2" width="150" height="143" border="0" align="right" title="Built on Cube Engine 2" /></a>
-                <a href="/indiedb"><img src="/bits/indiedb.png" width="208" height="100" border="0" align="right" style="margin-right: 10px" title="Find us on IndieDB"></a>
+                <a href="/home"><img src="/bits/lightbox-blank.gif" width="450" height="143" style="float: left" title="Red Eclipse" alt="Red Eclipse" /></a>
+                <a href="http://www.cubeengine.com/"><img src="/bits/lightbox-blank.gif" width="150" height="143" style="float: right" title="Built on Cube Engine 2" alt="Built on Cube Engine 2" /></a>
+                <a href="/indiedb"><img src="/bits/indiedb.png" width="208" height="100" style="float: right; margin-right: 10px" title="Find us on IndieDB" alt="Find us on IndieDB" /></a>
             </div>
             <div id="context">
                 <div id="main">
@@ -183,7 +183,7 @@
                     </p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
-                <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" frameborder="0" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;showsearch=0&amp;showinfo=0" /></div>
+                <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" style="border: 0px" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;allowfullscreen=true" allowfullscreen ></iframe></div>
             </div>
             <div class="endblock">&nbsp;</div>
             <div class="sliderblock">
@@ -228,7 +228,7 @@
             <div id="footer">
                 <a href="/download">Download</a>, <a href="/chat">Chat</a>, <a href="/forum">Discuss</a>, or <a href="/wiki">Learn More</a> today.
             </div>
-            <div id="copyright" align="center">
+            <div id="copyright" style="text-align: center">
                 <p>Red Eclipse, Copyright (C) 2009-2015 Quinton Reeves, Lee Salzman</p>
                 <p>Cube Engine 2, Copyright (C) 2001-2015 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</p>
             </div>
