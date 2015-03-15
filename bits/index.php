@@ -183,13 +183,7 @@
                     </p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
-                <div id="player">
-                    <object width="500" height="308" type="application/x-shockwave-flash" data="http://www.youtube.com/v/<?php echo $app['youtubevid']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;showsearch=0&amp;showinfo=0&amp;ap=%2526fmt%3D18">
-                        <param name="movie" value="http://www.youtube.com/v/<?php echo $app['youtubevid']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;showsearch=0&amp;showinfo=0&amp;ap=%2526fmt%3D18" />
-                        <param name="allowscriptaccess" value="always" />
-                        <param name="allowFullScreen" value="true" />
-                    </object>
-                </div>
+                <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" frameborder="0" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;showsearch=0&amp;showinfo=0" /></div>
             </div>
             <div class="endblock">&nbsp;</div>
             <div class="sliderblock">
