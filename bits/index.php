@@ -1,18 +1,19 @@
 <?php
-    $app['releasever'] = "v1.4 (Elara Edition)";
-    $app['releasedate'] = "22nd March 2013";
-    $app['releaseprefix'] = "red-eclipse-v14-elara-edition-for-";
+    $app['releasever'] = "1.5";
+    $app['releasename'] = "Aurora Edition";
+    $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
+    $app['releasedate'] = "22nd March 2015";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
 
-    $app['banner'] = "<b>HELP US:</b> Try our development version and beta test!";
-    $app['bannerurl'] = "/devel";
+    $app['banner'] = "<b>NEW RELEASE:</b> ".$app['releasefull']." (".$app['releasedate'].")";
+    $app['bannerurl'] = "/download";
 
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar 
-    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads/', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releaseprefix'], 'nav' => 1, 'redir' => 1);
+    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://dl.bintray.com/red-eclipse/releases', 'alturl' => 'http://dl.bintray.com/red-eclipse/releases/redeclipse_'.$app['releasever'].'_', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'http://redeclipse.net/forum/index.php', 'alturl' => 'http://redeclipse.net/forum/index.php?t=', 'nav' => 1, 'redir' => 1);
     $app['targets']['wiki'] = array('name' => 'Wiki', 'url' => 'http://redeclipse.net/wiki/', 'alturl' => 'http://redeclipse.net/wiki/', 'nav' => 1, 'redir' => 1);
@@ -28,14 +29,6 @@
     $app['targets']['indiedb'] = array('name' => 'IndieDB', 'url' => 'http://www.indiedb.com/games/red-eclipse', 'nav' => 0, 'redir' => 1);
 
     $app['targets']['google'] = array('name' => 'Google', 'url' => 'http://www.google.com/search?q=%22Red%20Eclipse%22', 'alturl' => 'http://www.google.com/search?q=%22Red%20Eclipse%22+', 'nav' => -1, 'redir' => 1);
-
-    $app['targets']['arch'] = array('name' => 'Arch', 'url' => 'https://aur.archlinux.org/packages/redeclipse/', 'nav' => -1, 'redir' => 1);
-    $app['targets']['chakra'] = array('name' => 'Chakra', 'url' => 'http://www.chakra-project.org/packages/index.php?act=search&subdir=&sortby=date&order=descending&searchpattern=redeclipse', 'nav' => -1, 'redir' => 1);
-    $app['targets']['debian'] = array('name' => 'Debian', 'url' => 'http://packages.debian.org/search?keywords=redeclipse', 'nav' => -1, 'redir' => 1);
-    $app['targets']['slackware'] = array('name' => 'Slackware', 'url' => 'http://slackbuilds.org/repository/14.0/games/redeclipse/', 'nav' => -1, 'redir' => 1);
-    $app['targets']['gentoo'] = array('name' => 'Gentoo', 'url' => 'http://git.overlays.gentoo.org/gitweb/?p=proj/gamerlay.git;a=tree;f=games-fps/redeclipse;h=3487897cbfb5a353ed5dae6add04d888b6cf8ae7;hb=HEAD', 'nav' => -1, 'redir' => 1);
-
-    $app['platforms'] = array('windows' => 0, 'linux' => 0, 'macosx' => 0, 'arch' => 1, 'chakra' => 1, 'debian' => 1, 'slackware' => 1, 'gentoo' => 1);
 
     $app['targets']['svn'] = array('name' => 'SVN', 'url' => 'http://svn.icculus.org/redeclipse/', 'alturl' => 'http://svn.icculus.org/redeclipse/?view=rev&revision=', 'nav' => -1, 'redir' => 1);
     $app['targets']['git'] = array('name' => 'GIT', 'url' => 'https://github.com/red-eclipse/', 'alturl' => 'https://github.com/red-eclipse/', 'nav' => -1, 'redir' => 1);
@@ -58,6 +51,17 @@
 
     $title = checkarg("title");
     if ($app['targets'][$app['target']]['redir']) {
+        if (($app['target'] == "download") && ($title != "")) {
+            if (($title == "linux") || ($title == "nix")) {
+                $title = "nix.tar.bz2";
+            }
+            else if (($title == "windows") || ($title == "win")) {
+                $title = "win.exe";
+            }
+            else {
+                $title = "all.tar.bz2";
+            }
+        }
         $app['url'] = $title != "" ? (
                 $app['targets'][$app['target']]['alturl'] != "" ? $app['targets'][$app['target']]['alturl'].$title : $app['targets'][$app['target']]['url'].$title
         ) : $app['targets'][$app['target']]['url'];
@@ -158,29 +162,13 @@
             <div id="context">
                 <div id="main">
                     <h1>Red Eclipse</h1><h2>&nbsp;&nbsp;a Free, Casual Arena Shooter</h2>
+                    <h3>Fun for everyone, young and old!</h3>
                     <h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
                     <h3>Parkour, impulse boosts, dashing, and other tricks</h3>
                     <h3>Favourite game modes with an array of mutators and variables</h3>
-                    <h3>Builtin editor lets you create your own maps cooperatively online</h3>
-                    <a href="/download" id="button">Free Download<br /><em><?php echo $app['releasever']; ?><br /> released <i><?php echo $app['releasedate']; ?></i></em></a>	 
+                    <h3>Built-in editor lets you create your own maps cooperatively online</h3>
+                    <a href="/download" id="button">Free Download<br /><em><?php echo $app['releasefull']; ?><br /> released <i><?php echo $app['releasedate']; ?></i></em></a>	 
                     <p id="digidist">also available on <a href="/itchio">Itch.io</a>, <a href="/desura">Desura</a> and <a href="/indiedb">IndieDB</a></p>
-                    <p id="mirror">and 3<sup>rd</sup> party packages for:
-<?php                   $m = 0;
-                        foreach ($app['platforms'] as $key => $targ) {
-                            if ($key != "" && $targ == 1) {
-                                if ($m == 1) {
-                                    echo ", ";
-                                    $m = 0;
-                                }
-                                echo "<a href=\"/". $key ."\">". $app['targets'][$key]['name'] ."</a>";
-                                $m = 1;
-                            }
-                        }
-                        if ($m == 1) {
-                            echo ".";
-                            $m = 0;
-                        } ?>
-                    </p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
                 <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" style="border: 0px" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;allowfullscreen=true" allowfullscreen></iframe></div>
