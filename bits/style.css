@@ -7,9 +7,9 @@ h4 { font: bold 21px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFF
 #container { margin: 0px auto; width: 980px; padding: 0px; }
 #main { margin: 5px 0px 0px 30px; width: 410px; float: left; }
 #button { display: inline; font: bold normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF; background: url(/bits/sprite.png) no-repeat -690px -1126px; margin: 0px 0px 0px 65px; padding: 12px 0px 0px 98px; float: left; height: 64px; width: 176px; text-decoration: none; text-shadow: -1px -1px 1px #773a00; line-height: 100%; }
-#rel, #devel, #digidist { font: 12px Arial, Helvetica, sans-serif; color: #dfbfb7; margin: 0px; padding: 5px 0px 0px; float: left; width: 402px; text-align: center; }
-#rel a, #devel a, #digidist a { color: #FFFFFF; border-bottom: 1px dotted #FFFFFF; text-decoration: none; }
-#rel a:hover, #devel a:hover, #digidist a:hover { color: #FFFFFF; text-decoration: none; border-bottom: 1px solid #FFFFFF; }
+#rel, #devel, #digidist, #bittorrent { font: 12px Arial, Helvetica, sans-serif; color: #dfbfb7; margin: 0px; padding: 5px 0px 0px; float: left; width: 402px; text-align: center; }
+#rel a, #devel a, #digidist a, #bittorrent a { color: #FFFFFF; border-bottom: 1px dotted #FFFFFF; text-decoration: none; }
+#rel a:hover, #devel a:hover, #digidist a:hover, #bittorrent a:hover { color: #FFFFFF; text-decoration: none; border-bottom: 1px solid #FFFFFF; }
 #button:hover { display:inline; font: bold normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF; background: url(/bits/sprite.png) no-repeat -690px -1217px; margin: 0px 0px 0px 65px; padding: 12px 0px 0px 98px; float: left; height: 64px; width: 176px; text-decoration: none; text-shadow: -1px -1px 1px #ff4444; line-height: 100%; }
 #button em { font: normal 12px Arial, Helvetica, sans-serif; text-decoration: none; }
 #header { margin: 10px 0px 0px; padding: 10px 0px; float: left; width: 980px; background: url(/bits/sprite.png) no-repeat center top; }
