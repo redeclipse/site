@@ -181,7 +181,7 @@
                     <h3>Built-in editor lets you create your own maps cooperatively online</h3>
                     <a href="/download" id="button">Free Download<br /><em><?php echo $app['releasefull']; ?><br /> released <i><?php echo $app['releasedate']; ?></i></em></a>	 
                     <p id="digidist">also available on <a href="/itchio">Itch.io</a> or <a href="/desura">Desura</a></p>
-                    <p id="bittorrent">you can also download using BitTorrent: <a href=\"/bits/redeclipse_1.5_win.torrent">Windows</a> <a href=\"/bits/redeclipse_1.5_nix.torrent">Linux</a> <a href=\"/bits/redeclipse_1.5_all.torrent">Other/All</a></p>
+                    <p id="bittorrent">and via BitTorrent: <a href="/bits/redeclipse_<?php echo $app['releasever']; ?>_win.torrent">Windows</a> | <a href="/bits/redeclipse_<?php echo $app['releasever']; ?>_nix.torrent">Linux</a> | <a href="/bits/redeclipse_<?php echo $app['releasever']; ?>_all.torrent">Other/All</a></p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
                 <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" style="border: 0px" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;allowfullscreen=true" allowfullscreen></iframe></div>
