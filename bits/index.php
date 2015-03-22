@@ -13,7 +13,10 @@
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar 
-    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://dl.bintray.com/red-eclipse/releases', 'alturl' => 'http://dl.bintray.com/red-eclipse/releases/redeclipse_'.$app['releasever'].'_', 'nav' => 1, 'redir' => 1);
+    //$app['targets']['download'] = array('name' => 'Download', 'url' => 'http://dl.bintray.com/red-eclipse/releases', 'alturl' => 'http://dl.bintray.com/red-eclipse/releases/redeclipse_'.$app['releasever'].'_', 'nav' => 1, 'redir' => 1);
+    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/downloads/start/', 'nav' => 1, 'redir' => 1);
+    $app['download'] = array('windows' => '82334', 'linux' => '82335', 'all' => '82337');
+
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'http://redeclipse.net/forum/index.php', 'alturl' => 'http://redeclipse.net/forum/index.php?t=', 'nav' => 1, 'redir' => 1);
     $app['targets']['wiki'] = array('name' => 'Wiki', 'url' => 'http://redeclipse.net/wiki/', 'alturl' => 'http://redeclipse.net/wiki/', 'nav' => 1, 'redir' => 1);
@@ -52,15 +55,24 @@
     $title = checkarg("title");
     if ($app['targets'][$app['target']]['redir']) {
         if (($app['target'] == "download") && ($title != "")) {
-            if (($title == "linux") || ($title == "nix")) {
-                $title = "nix.tar.bz2";
-            }
-            else if (($title == "windows") || ($title == "win")) {
-                $title = "win.exe";
+            if (isset($app['download'][$title])) {
+                $title = $app['download'][$title];
             }
             else {
-                $title = "all.tar.bz2";
+                $title = "";
             }
+            //if (($title == "linux") || ($title == "nix")) {
+            //    $title = "nix.tar.bz2";
+            //    $title = "82335";
+            //}
+            //else if (($title == "windows") || ($title == "win")) {
+            //    $title = "win.exe";
+            //    $title = "82334";
+            //}
+            //else {
+            //    $title = "all.tar.bz2";
+            //    $title = "82337";
+            //}
         }
         $app['url'] = $title != "" ? (
                 $app['targets'][$app['target']]['alturl'] != "" ? $app['targets'][$app['target']]['alturl'].$title : $app['targets'][$app['target']]['url'].$title
