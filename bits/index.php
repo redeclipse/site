@@ -49,19 +49,13 @@
     
     $app['target'] = checkarg("target", "home");
     if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
+    if ($app['target'] == "desura") $app['target'] = "indiedb";
 
     $title = checkarg("title");
-    if ($title == "desura") {
-        $title = "indiedb";
-    }
     if ($app['targets'][$app['target']]['redir']) {
         if (($app['target'] == "download") && ($title != "")) {
-            if (isset($app['download'][$title])) {
-                $title = $app['download'][$title];
-            }
-            else {
-                $title = "";
-            }
+            if (isset($app['download'][$title])) $title = $app['download'][$title];
+            else $title = "";
         }
         $app['url'] = $title != "" ? (
                 $app['targets'][$app['target']]['alturl'] != "" ? $app['targets'][$app['target']]['alturl'].$title : $app['targets'][$app['target']]['url'].$title
