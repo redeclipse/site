@@ -13,7 +13,6 @@
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar 
-    //$app['targets']['download'] = array('name' => 'Download', 'url' => 'http://dl.bintray.com/red-eclipse/releases', 'alturl' => 'http://dl.bintray.com/red-eclipse/releases/redeclipse_'.$app['releasever'].'_', 'nav' => 1, 'redir' => 1);
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/downloads/start/', 'nav' => 1, 'redir' => 1);
     $app['download'] = array('windows' => '82334', 'linux' => '82335', 'all' => '82337');
 
@@ -28,7 +27,6 @@
     $app['targets']['youtube'] = array('name' => 'Youtube', 'url' => 'http://www.youtube.com/results?search_query=%22Red%20Eclipse%22', 'alturl' => 'http://www.youtube.com/results?search_query=%22Red%20Eclipse%22+', 'nav' => 0, 'redir' => 1);
 
     $app['targets']['itchio'] = array('name' => 'Itch.io', 'url' => 'http://redeclipse.itch.io/red-eclipse', 'nav' => 0, 'redir' => 1);
-    $app['targets']['desura'] = array('name' => 'Desura', 'url' => 'http://www.desura.com/games/red-eclipse', 'nav' => 0, 'redir' => 1);
     $app['targets']['indiedb'] = array('name' => 'IndieDB', 'url' => 'http://www.indiedb.com/games/red-eclipse', 'nav' => 0, 'redir' => 1);
 
     $app['targets']['google'] = array('name' => 'Google', 'url' => 'http://www.google.com/search?q=%22Red%20Eclipse%22', 'alturl' => 'http://www.google.com/search?q=%22Red%20Eclipse%22+', 'nav' => -1, 'redir' => 1);
@@ -53,6 +51,9 @@
     if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
 
     $title = checkarg("title");
+    if ($title == "desura") {
+        $title = "indiedb";
+    }
     if ($app['targets'][$app['target']]['redir']) {
         if (($app['target'] == "download") && ($title != "")) {
             if (isset($app['download'][$title])) {
@@ -61,18 +62,6 @@
             else {
                 $title = "";
             }
-            //if (($title == "linux") || ($title == "nix")) {
-            //    $title = "nix.tar.bz2";
-            //    $title = "82335";
-            //}
-            //else if (($title == "windows") || ($title == "win")) {
-            //    $title = "win.exe";
-            //    $title = "82334";
-            //}
-            //else {
-            //    $title = "all.tar.bz2";
-            //    $title = "82337";
-            //}
         }
         $app['url'] = $title != "" ? (
                 $app['targets'][$app['target']]['alturl'] != "" ? $app['targets'][$app['target']]['alturl'].$title : $app['targets'][$app['target']]['url'].$title
@@ -180,7 +169,7 @@
                     <h3>Favourite game modes with an array of mutators and variables</h3>
                     <h3>Built-in editor lets you create your own maps cooperatively online</h3>
                     <a href="/download" id="button">Free Download<br /><em><?php echo $app['releasefull']; ?><br /> released <i><?php echo $app['releasedate']; ?></i></em></a>	 
-                    <p id="digidist">also available on <a href="/itchio">Itch.io</a> or <a href="/desura">Desura</a></p>
+                    <p id="digidist">also available on <a href="/itchio">Itch.io</a> or <a href="/indiedb">IndieDB</a></p>
                     <p id="bittorrent">and via BitTorrent: <a href="/bits/redeclipse_<?php echo $app['releasever']; ?>_win.torrent">Windows</a> | <a href="/bits/redeclipse_<?php echo $app['releasever']; ?>_nix.torrent">Linux</a> | <a href="/bits/redeclipse_<?php echo $app['releasever']; ?>_all.torrent">Other/All</a></p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
