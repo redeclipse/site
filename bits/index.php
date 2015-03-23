@@ -48,8 +48,8 @@
     }
     
     $app['target'] = checkarg("target", "home");
-    if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
     if ($app['target'] == "desura") $app['target'] = "indiedb";
+    if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
 
     $title = checkarg("title");
     if ($app['targets'][$app['target']]['redir']) {
