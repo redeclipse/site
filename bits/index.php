@@ -46,9 +46,9 @@
     function checkarg($arg = "", $def = "") {
         return isset($_GET[$arg]) && $_GET[$arg] != "" ? $_GET[$arg] : $def;
     }
-    
+
     $app['platform'] = "";
-    if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "linux;
+    if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "linux";
     elseif (preg_match("/mac os x/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "osx";
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "windows";
 
