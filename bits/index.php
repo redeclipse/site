@@ -1,5 +1,5 @@
 <?php
-    $app['releasever'] = "1.5";
+    $app['releasever'] = "1.5.1";
     $app['releasename'] = "Aurora Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
     $app['releasedate'] = "22nd March 2015";
@@ -14,7 +14,7 @@
 
     // nav items should be in reverse order for the top navbar 
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/downloads/start/', 'nav' => 1, 'redir' => 1);
-    $app['download'] = array('windows' => '82334', 'linux' => '82335', 'all' => '82337');
+    $app['download'] = array('windows' => '82334', 'linux' => '82335', 'osx' => '83570', 'all' => '82337');
 
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'http://redeclipse.net/forum/index.php', 'alturl' => 'http://redeclipse.net/forum/index.php?t=', 'nav' => 1, 'redir' => 1);
@@ -164,7 +164,7 @@
                     <h3>Built-in editor lets you create your own maps cooperatively online</h3>
                     <a href="/download" id="button">Free Download<br /><em><?php echo $app['releasefull']; ?><br /> released <i><?php echo $app['releasedate']; ?></i></em></a>	 
                     <p id="digidist">also available on <a href="/itchio">Itch.io</a> or <a href="/indiedb">IndieDB</a></p>
-                    <p id="bittorrent">and via BitTorrent: <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.torrent">Windows</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.torrent">Linux</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.torrent">Combined</a></p>
+                    <p id="bittorrent">and via BitTorrent: <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.torrent">Windows</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.torrent">Linux</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_osx.torrent">OS X</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.torrent">Combined</a></p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
                 </div>
                 <div id="player"><iframe id="ytplayer" type="text/html" width="500" height="308" style="border: 0px" src="http://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?&amp;origin=http://<?php echo $_SERVER['SERVER_NAME']; ?>&amp;color1=0x000000&amp;color2=0x000000&amp;border=0&amp;fs=1&amp;egm=0&amp;allowfullscreen=true" allowfullscreen></iframe></div>
