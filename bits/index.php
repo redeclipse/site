@@ -47,6 +47,11 @@
         return isset($_GET[$arg]) && $_GET[$arg] != "" ? $_GET[$arg] : $def;
     }
     
+    $app['platform'] = "";
+    if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "linux;
+    elseif (preg_match("/mac os x/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "osx";
+    elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "windows";
+
     $app['target'] = checkarg("target", "home");
     if ($app['target'] == "desura") $app['target'] = "indiedb";
     if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
@@ -162,7 +167,7 @@
                     <h3>Parkour, impulse boosts, dashing, and other tricks</h3>
                     <h3>Favourite game modes with an array of mutators and variables</h3>
                     <h3>Built-in editor lets you create your own maps cooperatively online</h3>
-                    <a href="/download" id="button">Free Download<br /><em><?php echo $app['releasefull']; ?><br /> released <i><?php echo $app['releasedate']; ?></i></em></a>	 
+                    <a href="/download/<?php echo $app['platform']; ?>" id="button">Free Download<br /><em><?php echo $app['releasefull']; ?><br /> released <i><?php echo $app['releasedate']; ?></i></em></a>	 
                     <p id="digidist">also available on <a href="/itchio">Itch.io</a> or <a href="/indiedb">IndieDB</a></p>
                     <p id="bittorrent">and via BitTorrent: <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.torrent">Windows</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.torrent">Linux</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_osx.torrent">OS X</a> | <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.torrent">Combined</a></p>
                     <p id="devel">or, get the <a href="/devel">development version</a> and live on the bleeding edge</p>
