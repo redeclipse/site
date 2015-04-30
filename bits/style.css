@@ -36,7 +36,7 @@ h4 { font: bold 21px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFF
 .rightblock { background: url(/bits/sprite.png) 0px -767px; margin: 0px; padding: 14px 20px 0px; float: right; width: 210px; font-size: 14px; color: #a5a5a5; clear: right; font-weight: normal; text-align: center; }
 .rightblock ul { margin: 0px 0px 10px; padding: 0px; float: left; list-style: none; display: block; }
 .rightblock li { float: left; display: block; width: 41px; margin: 10px 0px 0px 10px; padding: 0px; height: 41px; }
-.rightblock a { color: #FFFFFF; text-decoration: none; float: left; }
+.rightblock a { color: #FFFFFF; text-decoration: none; }
 .rightblock a:visited { color: #FFFFFF; text-decoration: none; }
 .rightblock a:hover { color: #CCCCCC; text-decoration: none; }
 .rightblock iframe { margin-bottom: 4px;}
