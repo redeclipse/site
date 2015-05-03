@@ -84,7 +84,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <title>Red Eclipse: <?php echo ($app['targets'][$app['target']]['name'] != "" ? $app['targets'][$app['target']]['name'] : "Home"); ?></title>
+        <title>Red Eclipse: <?php echo ($app['targets'][$app['target']]['name'] != "" ? $app['targets'][$app['target']]['name'] : "A free casual arena shooter featuring parkour"); ?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <link rel="apple-touch-icon" sizes="57x57" href="/bits/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/bits/apple-touch-icon-60x60.png">
@@ -163,7 +163,7 @@
             </div>
             <div id="context">
                 <div id="main">
-                    <h1>Red Eclipse</h1><h2>&nbsp;&nbsp;a Free, Casual Arena Shooter</h2>
+                    <h1>Red Eclipse</h1><h2>&nbsp;&nbsp;a free casual arena shooter</h2>
                     <h3>Fun for everyone, young and old!</h3>
                     <h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
                     <h3>Parkour, impulse boosts, dashing, and other tricks</h3>
