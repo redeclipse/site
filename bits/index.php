@@ -110,6 +110,7 @@
         <link href="/bits/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/bits/style.css" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.css" rel="stylesheet">
 
       
     </head>
@@ -203,34 +204,35 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
 
+
  <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active row">
     	<div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/001.jpg" target="_blank"><img class="img-responsive" src="thumbs/001.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/001.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/001.jpg" alt="screenshot"></a>
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/002.jpg" target="_blank"><img class="img-responsive" src="thumbs/002.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/002.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/002.jpg" alt="screenshot"></a>
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/003.jpg" target="_blank"><img class="img-responsive" src="thumbs/003.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/003.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/003.jpg" alt="screenshot"></a>
         </div>
          <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/004.jpg" target="_blank"><img class="img-responsive" src="thumbs/004.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/004.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/004.jpg" alt="screenshot"></a>
         </div>
     </div>
      <div class="item row">
     	<div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/005.jpg" target="_blank"><img class="img-responsive" src="thumbs/005.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/005.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/005.jpg" alt="screenshot"></a>
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/006.jpg" target="_blank"><img class="img-responsive" src="thumbs/006.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/006.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/006.jpg" alt="screenshot"></a>
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/007.jpg" target="_blank"><img class="img-responsive" src="thumbs/007.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/007.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/007.jpg" alt="screenshot"></a>
         </div>
          <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="images/008.jpg" target="_blank"><img class="img-responsive" src="thumbs/008.jpg" alt="screenshot"></a>
+      		<a href="/bits/images/008.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/008.jpg" alt="screenshot"></a>
         </div>
     </div>
   </div>
@@ -288,6 +290,57 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/bits/js/bootstrap.min.js"></script>
+          
+          <!-- lightbox -->
+       <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function ($) {
+ 
+            // delegate calls to data-toggle="lightbox"
+            $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+                event.preventDefault();
+                return $(this).ekkoLightbox({
+                    onShown: function() {
+                        if (window.console) {
+                            return console.log('Checking our the events huh?');
+                        }
+                    },
+                    onNavigate: function(direction, itemIndex) {
+                        if (window.console) {
+                            return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                        }
+                    }
+                });
+            });
+ 
+            //Programatically call
+            $('#open-image').click(function (e) {
+                e.preventDefault();
+                $(this).ekkoLightbox();
+            });
+            $('#open-youtube').click(function (e) {
+                e.preventDefault();
+                $(this).ekkoLightbox();
+            });
+ 
+            $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+                event.preventDefault();
+                return $(this).ekkoLightbox({
+                    onShown: function() {
+                        var a = this.modal_content.find('.modal-footer a');
+                        if(a.length > 0) {
+                            a.click(function(e) {
+                                e.preventDefault();
+                                this.navigateTo(2);
+                            }.bind(this));
+                        }
+                    }
+                });
+            });
+ 
+        });
+</script>
+      
       
         <script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
