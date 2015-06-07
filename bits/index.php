@@ -115,7 +115,6 @@
       
     </head>
     <body>
-    <div id="container">
      <nav class="navbar  navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -125,7 +124,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo $app['bannerurl']; ?>"><?php echo $app['banner']; ?></a>
+          <a class="navbar-brand" href="/home"><img src="/bits/redeclipse-small" alt="Red Eclipse">
+</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -135,22 +135,9 @@
       </div>
     </nav>  
    
-    <div class="row" id="header">          
-            <div class="col-xs-12 col-sm-6 col-md-4">
-             <a href="/home">
-            <img src="/bits/redeclipse-regular.png" class="img-responsive" alt="Red Eclipse" style="margin:auto">
-            </a>
-            </div>
-            <div class="col-xs-4 col-sm-2 col-md-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-4">
-            <a href="/indiedb">
-             <img src="/bits/indiedb.png" class="img-responsive"  alt="indiedb" id="indiedb">
-             </a>
-            </div>
-             <div class="col-xs-4 col-sm-2 col-md-2">
-             <a href="/bits/http://www.cubeengine.com/">
-             <img src="cube2.png" class="img-responsive" alt="cube2" id="cube2"></a>
-            </div>
-    </div>
+<div id="container">
+
+   
    
    
     <div class="row" id="main">
@@ -190,7 +177,7 @@
             
         </div>
 
-	<div class="col-xs12 col-sm-12 col-md-12 col-lg-8" style="padding:30px 30px 30px 0;">
+	<div class="col-xs12 col-sm-12 col-md-12 col-lg-8" style="padding:9px 0px 30px 0;">
     	<div class="embed-responsive embed-responsive-16by9">
   			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oJRZHjyj7Zg?showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
@@ -202,7 +189,6 @@
  
     
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
 
 
  <!-- Wrapper for slides -->
@@ -255,10 +241,16 @@
 
 </div>
 <div class="row footer">
-	<div class="col-xs-12 col-sm-8 col-md-10" style="padding: 20px 45px 0px 45px;">
-	<a href="/download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>&nbsp;Download</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="/chat"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;Chat</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="/forum"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;Discuss</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="/wiki"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;Learn More</a>
-	</div>
-    <div class="col-xs-12 col-sm-4 col-md-2 social-icons" style="padding: 15px 30px;">
+	<div class="col-xs-4 col-sm-2 col-md-2">
+            <a href="/indiedb">
+             <img src="/bits/indiedb.png" class="img-responsive"  alt="indiedb" id="indiedb" style="margin:auto">
+             </a>
+            </div>
+             <div class="col-xs-4 col-sm-2 col-md-2">
+             <a href="http://www.cubeengine.com/">
+             <img src="/bits/cube2.png" class="img-responsive" alt="cube2" id="cube2" style="margin:auto"></a>
+            </div>
+    <div class="col-xs-4 col-sm-4 col-md-2 col-sm-offset-4 col-md-offset-6 social-icons" style="padding: 20px 30px;">
 	  <a href="https://github.com/red-eclipse" target="_blank"><span class="fa fa-github-square"></span></a> 
       <a href="https://www.facebook.com/redeclipse.net" target="_blank"><span class="fa fa-facebook-square"></span></a>
       <a href="https://plus.google.com/+redeclipsenet" target="_blank"><span class="fa fa-google-plus-square"></span></a>
@@ -275,9 +267,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/bits/js/bootstrap.min.js"></script>
-          
-          <!-- lightbox -->
-       <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
 <script type="text/javascript">
         $(document).ready(function ($) {
  
@@ -325,7 +316,6 @@
  
         });
 </script>
-      
       
         <script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
