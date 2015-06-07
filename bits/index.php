@@ -208,32 +208,17 @@
  <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active row">
-    	<div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/001.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/001.jpg" alt="screenshot"></a>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/002.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/002.jpg" alt="screenshot"></a>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/003.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/003.jpg" alt="screenshot"></a>
-        </div>
-         <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/004.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/004.jpg" alt="screenshot"></a>
-        </div>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/001.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/001.jpg" alt="screenshot"></a>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/002.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/002.jpg" alt="screenshot"></a>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/003.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/003.jpg" alt="screenshot"></a>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/004.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/004.jpg" alt="screenshot"></a>
     </div>
      <div class="item row">
-    	<div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/005.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/005.jpg" alt="screenshot"></a>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/006.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/006.jpg" alt="screenshot"></a>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/007.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/007.jpg" alt="screenshot"></a>
-        </div>
-         <div class="col-xs-6 col-sm-3 col-md-3" style="padding:0">
-      		<a href="/bits/images/008.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/008.jpg" alt="screenshot"></a>
-        </div>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/005.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/005.jpg" alt="screenshot"></a>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/006.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/006.jpg" alt="screenshot"></a>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/007.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/007.jpg" alt="screenshot"></a>
+      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/008.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/008.jpg" alt="screenshot"></a>
+            
     </div>
   </div>
 
