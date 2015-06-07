@@ -141,7 +141,7 @@
    
    
     <div class="row" id="main">
-		<div class="col-xs12 col-sm-12 col-md-12 col-lg-4" style="text-align:center; padding:40px">
+		<div class="col-xs12 col-sm-12 col-md-6 col-lg-4" style="text-align:center; padding:40px">
        	 	<h1>a free casual <b>arena shooter</b></h1>
         	<h3>Fun for everyone, young and old!</h3>
         	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
@@ -150,7 +150,7 @@
         	<h3>Create your own maps cooperatively online</h3>
         
   
-        	<div class="col-xs12 col-sm-12 col-md-12">
+        	<div class="col-xs12 col-sm-12 col-md-6">
         		<a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary"><p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p><p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p></a>
         	</div>
         
