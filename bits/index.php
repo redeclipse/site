@@ -141,13 +141,8 @@
    
    
     <div class="row" id="main">
-		<div class="col-xs12 col-sm-12 col-md-6 col-lg-4" style="text-align:center; padding:40px">
+		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:40px">
        	 	<h1>a free casual <b>arena shooter</b></h1>
-        	<h3>Fun for everyone, young and old!</h3>
-        	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
-        	<h3>Parkour, impulse boosts, dashing, and other tricks</h3>
-        	<h3>An array of mutators and variables</h3>
-        	<h3>Create your own maps cooperatively online</h3>
         
   
         	<div class="col-xs12 col-sm-12 col-md-12">
@@ -177,7 +172,7 @@
             
         </div>
 
-	<div class="col-xs12 col-sm-12 col-md-6 col-lg-8" style="padding:9px 0px 30px 0;">
+	<div class="col-xs12 col-sm-12 col-md-6" style="padding:9px 0px 30px 0;">
     	<div class="embed-responsive embed-responsive-16by9">
   			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oJRZHjyj7Zg?showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
