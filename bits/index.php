@@ -177,7 +177,7 @@
             
         </div>
 
-	<div class="col-xs12 col-sm-12 col-md-12 col-lg-8" style="padding:9px 0px 30px 0;">
+	<div class="col-xs12 col-sm-12 col-md-6 col-lg-8" style="padding:9px 0px 30px 0;">
     	<div class="embed-responsive embed-responsive-16by9">
   			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oJRZHjyj7Zg?showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
