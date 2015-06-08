@@ -141,8 +141,13 @@
    
    
     <div class="row" id="main">
-		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:40px">
+		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 0 0px;">
        	 	<h1>a free casual <b>arena shooter</b></h1>
+        	<h3>Fun for everyone, young and old!</h3>
+        	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
+        	<h3>Parkour, impulse boosts, dashing, and other tricks</h3>
+        	<h3>An array of mutators and variables</h3>
+        	<h3>Create your own maps cooperatively online</h3>
         
   
         	<div class="col-xs12 col-sm-12 col-md-12">
