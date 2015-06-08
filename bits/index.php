@@ -124,7 +124,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/home"><img src="/bits/redeclipse-small" alt="Red Eclipse">
+          <a class="navbar-brand" href="/home"><img src="/bits/redeclipse-small.png" alt="Red Eclipse">
 </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
