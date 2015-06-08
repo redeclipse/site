@@ -141,7 +141,7 @@
    
    
     <div class="row" id="main">
-		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 15px 0;">
+		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 30px 0;">
        	 	<h1>a free casual <b>arena shooter</b></h1>
         	<h3>Fun for everyone, young and old!</h3>
         	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
@@ -156,7 +156,7 @@
         
         	<div class="col-xs12 col-sm-12 col-md-12">
 				<div class="btn-group">
-  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Other download <span class="caret"></span></button>
+  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Mirror <span class="caret"></span></button>
   					<ul class="dropdown-menu" role="menu">
     					<li><a href="/itchio">Itch.io</a><a href="/indiedb">IndieDB</a></li>
   					</ul>
