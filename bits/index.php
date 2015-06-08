@@ -258,8 +258,8 @@
     </div>
    </div>
  <div id="copyright" style="text-align: center">
-<p>Red Eclipse, Copyright <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 2009-2015 Quinton Reeves, Lee Salzman</p>
-<p>Cube Engine 2, Copyright <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 2001-2015 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</p>
+<p>Red Eclipse, Copyright &copy; 2009-2015 Quinton Reeves, Lee Salzman</p>
+<p>Cube Engine 2, Copyright &copy; 2001-2015 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</p>
 <p><a href="http://remiclouet.com" target="_blank">Website by R&eacute;mi Clouet d'Orval</a></p>
 </div>
 </div>
