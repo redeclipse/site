@@ -141,7 +141,7 @@
    
    
     <div class="row" id="main">
-		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 0 0px;">
+		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 15px 0;">
        	 	<h1>a free casual <b>arena shooter</b></h1>
         	<h3>Fun for everyone, young and old!</h3>
         	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
