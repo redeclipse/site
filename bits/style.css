@@ -2,12 +2,12 @@
 @import url(http://fonts.googleapis.com/css?family=Ruda|Orbitron:400,900|Oswald:300,400,700);
 body{
 background:#340201 url(/bits/bg2.jpg) no-repeat center top;
-color:rgb(190, 190, 190);
+color:rgb(220,220,220);
 font-family:Ruda;
 line-height: 1.7em;
 }
-a {color:rgb(255,255,255);}
-a:hover {color:rgb(255,255,255);}
+a {color:rgb(255,190,190);}
+a:hover {color:rgb(255,190,190);}
 .navbar-inverse {
     background-color: rgba(0, 0, 0, 0.3);
     border:none;
@@ -72,7 +72,7 @@ display:block;
 
 h3{
 	    color: rgb(200, 190, 190);
-	font-family:Ruda; font-weight:400; font-size:14px; margin:10px}
+	font-family:Ruda; font-weight:900; font-size:14px; margin:10px}
 h4{
 	margin-top:0;
 	font-family: Orbitron;
