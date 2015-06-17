@@ -1,8 +1,8 @@
 <?php
-    $app['releasever'] = "1.5.1";
+    $app['releasever'] = "1.5.2";
     $app['releasename'] = "Aurora Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
-    $app['releasedate'] = "22nd March 2015";
+    $app['releasedate'] = "17th June 2015";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
@@ -14,7 +14,7 @@
 
     // nav items should be in reverse order for the top navbar 
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/downloads/start/', 'nav' => 0, 'redir' => 1);
-    $app['download'] = array('windows' => '82334', 'linux' => '82335', 'osx' => '83570', 'all' => '82337');
+    $app['download'] = array('windows' => '86142', 'linux' => '86141', 'osx' => '86140', 'all' => '86139');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
