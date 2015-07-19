@@ -106,6 +106,7 @@
         <meta name="msapplication-TileImage" content="/bits/mstile-144x144.png">
         <meta name="msapplication-config" content="/bits/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link href="/bits/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/bits/style.css" />
