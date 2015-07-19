@@ -1,8 +1,8 @@
 <?php
-    $app['releasever'] = "1.5.2";
+    $app['releasever'] = "1.5.3";
     $app['releasename'] = "Aurora Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
-    $app['releasedate'] = "17th June 2015";
+    $app['releasedate'] = "19th July 2015";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
