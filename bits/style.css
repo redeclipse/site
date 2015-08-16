@@ -17,7 +17,7 @@ a:hover {color:rgb(255,190,190);}
 }
 .navbar-toggle{
 	margin-top:23px;}
-	
+
 .navbar-nav > li > a {
     font-family: Oswald;
     text-transform: uppercase;
@@ -41,7 +41,7 @@ transition:all 0.15s linear 0s;
 -o-box-shadow: inset 0px 0px 40px 0px rgba(50,0,0,0.5);
 box-shadow: inset 0px 0px 40px 0px rgba(50,0,0,0.5);
 }
-	
+
 .navbar-brand {
   height:auto;
   padding:0;
@@ -111,8 +111,8 @@ box-shadow: inset 0px 1px 0px 0px rgba(255,0,0,1), inset 0px 0px 40px 0px rgba(5
 
 
 	}
-	
-	
+
+
 .btn-default {
     background-color: #fff;
     border-color: #ccc;
@@ -154,7 +154,7 @@ margin:0;	}
 
 }
 #header{
-	
+
 	padding-bottom:20px;
 	}
 
@@ -172,7 +172,7 @@ background-image:  linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 1
 -o-box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,0.1),inset 0px 0px 70px 0px rgba(0,0,0,1);
 box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,0.1),inset 0px 0px 70px 0px rgba(0,0,0,1);
 }
-	
+
 .support{
 	padding-top:20px;
 	padding-bottom:20px;
@@ -183,7 +183,7 @@ box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,0.1),inset 0px 0px 70px 0px r
 		background-color:#600;
 		font-size:14px;
 		font-family:Orbitron;
-		
+
 		}
 	.social-icons{
 		font-size:30px;
@@ -199,7 +199,7 @@ box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,0.1),inset 0px 0px 70px 0px r
 		 padding:9px 0px 0px 0;
 	 }
 		}
-	
+
 	@media screen and (min-width: 1280px) {
 	#container{
 		width:1280px;
