@@ -12,7 +12,7 @@
 
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
-    // nav items should be in reverse order for the top navbar 
+    // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/downloads/start/', 'nav' => 0, 'redir' => 1);
     $app['download'] = array('windows' => '87523', 'linux' => '87522', 'osx' => '87521', 'all' => '87520');
 
@@ -84,7 +84,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <title>Red Eclipse: <?php echo ($app['targets'][$app['target']]['name'] != "" ? $app['targets'][$app['target']]['name'] : "A free casual arena shooter featuring parkour"); ?></title>
+        <title>Red Eclipse: <?php echo ($app['targets'][$app['target']]['name'] != "" ? $app['targets'][$app['target']]['name'] : "A free arena shooter featuring parkour"); ?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <link rel="apple-touch-icon" sizes="57x57" href="/bits/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/bits/apple-touch-icon-60x60.png">
@@ -107,13 +107,13 @@
         <meta name="msapplication-config" content="/bits/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link href="/bits/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/bits/style.css" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.css" rel="stylesheet">
 
-      
+
     </head>
     <body>
      <nav class="navbar  navbar-inverse navbar-static-top">
@@ -134,27 +134,27 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </nav>  
-   
+    </nav>
+
 <div id="container">
 
-   
-   
-   
+
+
+
     <div class="row" id="main">
 		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 30px 0;">
-       	 	<h1>a free casual <b>arena shooter</b></h1>
+       	 	<h1>a free <b>arena shooter</b></h1>
         	<h3>Fun for everyone, young and old!</h3>
         	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
         	<h3>Parkour, impulse boosts, dashing, and other tricks</h3>
         	<h3>An array of mutators and variables</h3>
         	<h3>Create your own maps cooperatively online</h3>
-        
-  
+
+
         	<div class="col-xs12 col-sm-12 col-md-12">
         		<a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary"><p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p><p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p></a>
         	</div>
-        
+
         	<div class="col-xs12 col-sm-12 col-md-12">
 				<div class="btn-group">
   					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Mirrors<span class="caret"></span></button>
@@ -175,7 +175,7 @@
   					</ul>
  				</div>
  			</div>
-            
+
         </div>
 
 	<div class="col-xs12 col-sm-12 col-md-6 video">
@@ -183,12 +183,12 @@
   			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oJRZHjyj7Zg?showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
-    
-    
+
+
 </div>
 
- 
-    
+
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
 
@@ -205,7 +205,7 @@
       		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/006.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/006.jpg" alt="screenshot"></a>
       		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/007.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/007.jpg" alt="screenshot"></a>
       		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/008.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/008.jpg" alt="screenshot"></a>
-            
+
     </div>
   </div>
 
@@ -223,7 +223,7 @@
 
 <div class="row texte">
 	<div class="col-xs-12 col-sm-4 col-md-4">
-<p>Red Eclipse is a fun-filled new take on the casual first person arena shooter, built as a total conversion of <a href="http://www.cubeengine.com/">Cube Engine 2</a>, which lends itself toward a balanced gameplay, with a general theme of agility in a variety of environments. For more information, please see our <a href="/wiki">Wiki</a> or <a href="/forum">Forums</a>.</p>
+<p>Red Eclipse is a fun-filled new take on the first person arena shooter, built as a total conversion of <a href="http://www.cubeengine.com/">Cube Engine 2</a>, which lends itself toward a balanced gameplay, with a general theme of agility in a variety of environments. For more information, please see our <a href="/wiki">Wiki</a> or <a href="/forum">Forums</a>.</p>
 <p>The project is a <i>Free and Open Source</i> game, built on <a href="http://www.cubeengine.com/">Cube Engine 2</a> using <a href="http://libsdl.org/">SDL</a> and <a href="http://opengl.org/">OpenGL</a> which allows it to be ported to many platforms; you can <a href="/download">download a package</a> for <i>Windows, GNU/Linux, BSD, and OS X</i>, or grab a development copy from our <a href="/devel">Github</a> repository and live on the bleeding edge.</p>
 </div>
 
@@ -252,7 +252,7 @@
              <img src="/bits/cube2.png" class="img-responsive" alt="cube2" id="cube2" style="margin:auto"></a>
             </div>
     <div class="col-xs-4 col-sm-4 col-md-2 col-sm-offset-4 col-md-offset-6 social-icons" style="padding: 20px 30px;">
-	  <a href="https://github.com/red-eclipse" target="_blank"><span class="fa fa-github-square"></span></a> 
+	  <a href="https://github.com/red-eclipse" target="_blank"><span class="fa fa-github-square"></span></a>
       <a href="https://www.facebook.com/redeclipse.net" target="_blank"><span class="fa fa-facebook-square"></span></a>
       <a href="https://plus.google.com/+redeclipsenet" target="_blank"><span class="fa fa-google-plus-square"></span></a>
 
@@ -268,11 +268,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/bits/js/bootstrap.min.js"></script>
-    
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
 <script type="text/javascript">
         $(document).ready(function ($) {
- 
+
             // delegate calls to data-toggle="lightbox"
             $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
                 event.preventDefault();
@@ -289,7 +289,7 @@
                     }
                 });
             });
- 
+
             //Programatically call
             $('#open-image').click(function (e) {
                 e.preventDefault();
@@ -299,7 +299,7 @@
                 e.preventDefault();
                 $(this).ekkoLightbox();
             });
- 
+
             $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
                 event.preventDefault();
                 return $(this).ekkoLightbox({
@@ -314,10 +314,10 @@
                     }
                 });
             });
- 
+
         });
 </script>
-      
+
         <script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
