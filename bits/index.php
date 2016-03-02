@@ -3,6 +3,7 @@
     $app['releasename'] = "Aurora Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
     $app['releasedate'] = "19th July 2015";
+    $app['releasedlurl'] = "red-eclipse-v153-aurora-edition-for-";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
@@ -13,7 +14,7 @@
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar
-    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/downloads/start/', 'nav' => 0, 'redir' => 1);
+    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releasedlurl'], 'nav' => 0, 'redir' => 1);
     $app['download'] = array('windows' => '87523', 'linux' => '87522', 'osx' => '87521', 'all' => '87520');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
@@ -51,7 +52,7 @@
 
     $app['platform'] = "";
     if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "linux";
-    elseif (preg_match("/mac os x/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "osx";
+    elseif (preg_match("/mac os x/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "os-x";
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "windows";
 
     $app['target'] = checkarg("target", "home");
@@ -61,7 +62,10 @@
     $title = checkarg("title");
     if ($app['targets'][$app['target']]['redir']) {
         if (($app['target'] == "download") && ($title != "")) {
-            if (isset($app['download'][$title])) $title = $app['download'][$title];
+            if (isset($app['download'][$title])) {
+                if($app['download'][$title] == "osx") $title = "os-x";
+                else $title = $app['download'][$title];
+            }
             else $title = "";
         }
         $app['url'] = $title != "" ? (
