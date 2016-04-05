@@ -38,7 +38,7 @@ class Post implements RequestMethod
      * URL to which requests are POSTed.
      * @const string
      */
-    const SITE_VERIFY_URL = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https://www.google.com/recaptcha/api/siteverify' : 'http://www.google.com/recaptcha/api/siteverify';
+    const SITE_VERIFY_URL = 'http://www.google.com/recaptcha/api/siteverify';
 
     /**
      * Submit the POST request with the specified parameters.
