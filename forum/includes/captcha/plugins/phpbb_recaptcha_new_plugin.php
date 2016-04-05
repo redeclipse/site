@@ -26,7 +26,7 @@ require_once($phpbb_root_path . 'recaptcha/autoload.' . $phpEx);
 */
 class phpbb_recaptcha_new extends phpbb_default_captcha
 {
-	var $recaptcha_server = 'https://www.google.com/recaptcha/api/siteverify';
+	var $recaptcha_server = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https://www.google.com/recaptcha/api/siteverify' : 'http://www.google.com/recaptcha/api/siteverify';
 	var $response;
 
 	// PHP4 Constructor
