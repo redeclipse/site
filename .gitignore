@@ -22,3 +22,5 @@ mediawiki/images/*
 !mediawiki/images/.htaccess
 mediawiki/mediawiki
 files/*
+admin/*
+horizon/*

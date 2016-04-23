@@ -1,7 +1,7 @@
 Options -Indexes
 
-php_value upload_max_filesize 8M
-php_value post_max_size 8M
+php_value upload_max_filesize 32M
+php_value post_max_size 32M
 
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www.redeclipse.net$ [OR,NC]
