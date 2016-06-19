@@ -1,9 +1,9 @@
 <?php
-    $app['releasever'] = "1.5.3";
-    $app['releasename'] = "Aurora Edition";
+    $app['releasever'] = "1.5.5";
+    $app['releasename'] = "Elysium Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
-    $app['releasedate'] = "19th July 2015";
-    $app['releasedlurl'] = "red-eclipse-v153-aurora-edition-";
+    $app['releasedate'] = "20th June 2015";
+    $app['releasedlurl'] = "red-eclipse-v155-elysium-edition-";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
@@ -15,7 +15,7 @@
 
     // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releasedlurl'], 'nav' => 0, 'redir' => 1);
-    $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'osx' => 'for-os-x', 'os-x' => 'for-os-x', 'all' => 'combined-all', 'combined-all' => 'combined-all');
+    $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'mac' => 'for-mac', 'mac' => 'for-mac', 'all' => 'combined-all', 'combined-all' => 'combined-all');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
@@ -52,7 +52,7 @@
 
     $app['platform'] = "";
     if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "linux";
-    elseif (preg_match("/mac os x/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "os-x";
+    elseif (preg_match("/mac os/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "mac";
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "windows";
 
     $app['target'] = checkarg("target", "home");
@@ -146,7 +146,7 @@
 		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 30px 0;">
        	 	<h1>a free <b>arena shooter</b></h1>
         	<h3>Fun for everyone, young and old!</h3>
-        	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
+        	<h3>Available for Windows, GNU/Linux, BSD, and MacOS</h3>
         	<h3>Parkour, impulse boosts, dashing, and other tricks</h3>
         	<h3>An array of mutators and variables</h3>
         	<h3>Create your own maps cooperatively online</h3>
@@ -166,7 +166,7 @@
 				<div class="btn-group">
   					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Torrents<span class="caret"></span></button>
   					<ul class="dropdown-menu" role="menu">
-    					<li><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_osx.tar.bz2.torrent">OS X</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined</a></li>
+    					<li><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_mac.tar.bz2.torrent">MacOS</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined</a></li>
   					</ul>
 				</div>
 				<div class="btn-group">
@@ -225,7 +225,7 @@
 <div class="row texte">
 	<div class="col-xs-12 col-sm-4 col-md-4">
 <p>Red Eclipse is a fun-filled new take on the first person arena shooter, built as a total conversion of <a href="http://www.cubeengine.com/">Cube Engine 2</a>, which lends itself toward a balanced gameplay, with a general theme of agility in a variety of environments. For more information, please see our <a href="/wiki">Wiki</a> or <a href="/forum">Forums</a>.</p>
-<p>The project is a <i>Free and Open Source</i> game, built on <a href="http://www.cubeengine.com/">Cube Engine 2</a> using <a href="http://libsdl.org/">SDL</a> and <a href="http://opengl.org/">OpenGL</a> which allows it to be ported to many platforms; you can <a href="/download">download a package</a> for <i>Windows, GNU/Linux, BSD, and OS X</i>, or grab a development copy from our <a href="/devel">Github</a> repository and live on the bleeding edge.</p>
+<p>The project is a <i>Free and Open Source</i> game, built on <a href="http://www.cubeengine.com/">Cube Engine 2</a> using <a href="http://libsdl.org/">SDL</a> and <a href="http://opengl.org/">OpenGL</a> which allows it to be ported to many platforms; you can <a href="/download">download a package</a> for <i>Windows, GNU/Linux, BSD, and MacOS</i>, or grab a development copy from our <a href="/devel">Github</a> repository and live on the bleeding edge.</p>
 </div>
 
 
