@@ -105,8 +105,9 @@
         <link rel="shortcut icon" href="/bits/favicon.ico">
         <meta name="msapplication-TileColor" content="#440000">
         <meta name="msapplication-TileImage" content="/bits/mstile-144x144.png">
+        <meta name="msapplication-navbutton-color" content="#440000">
         <meta name="msapplication-config" content="/bits/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#440000">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/bits/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/bits/style.css" />
@@ -142,7 +143,10 @@
                     <h3>An array of mutators and variables</h3>
                     <h3>Create your own maps cooperatively online</h3>
                     <div class="col-xs12 col-sm-12 col-md-12">
-                        <a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary"><p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p><p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p></a>
+                        <a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary">
+                            <p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p>
+                            <p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p>
+                        </a>
                     </div>
                     <div class="col-xs12 col-sm-12 col-md-12">
                         <div class="btn-group">
@@ -154,7 +158,12 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Torrents<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_mac.tar.bz2.torrent">MacOS</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined</a></li>
+                                <li>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_mac.tar.bz2.torrent">MacOS</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="btn-group">
@@ -164,7 +173,6 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-xs12 col-sm-12 col-md-6 video">
                     <div class="embed-responsive embed-responsive-16by9">
@@ -180,13 +188,13 @@
                             <a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/003.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/003.jpg" alt="screenshot"></a>
                             <a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/004.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/004.jpg" alt="screenshot"></a>
                     </div>
-                <?php for ($x = 4; $x <= $app['screenshots']; $x++) {
-                    if (($x % 4) == 0) { echo '<div class="item row">'; }
+                <?php for ($x = 5; $x <= $app['screenshots']; $x++) {
+                    if (($x % 4) == 1) { echo '<div class="item row">'; }
                     $y = $x;
                     if ($x < 10) { $y = "00".$x; }
                     elseif ($x < 100) { $y = "0".$x; }
                     echo '<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/'.$y.'.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/'.$y.'.jpg" alt="screenshot"></a>';
-                    if (($x % 4) == 3) { echo '</div>'; }
+                    if (($x % 4) == 0) { echo '</div>'; }
                 } ?>
                 </div>
                 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -194,7 +202,7 @@
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon  glyphicon-chevron-right"></span>
+                    <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
