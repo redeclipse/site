@@ -1,9 +1,9 @@
 <?php
-    $app['releasever'] = "1.5.3";
-    $app['releasename'] = "Aurora Edition";
+    $app['releasever'] = "1.5.5";
+    $app['releasename'] = "Elysium Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
-    $app['releasedate'] = "19th July 2015";
-    $app['releasedlurl'] = "red-eclipse-v153-aurora-edition-";
+    $app['releasedate'] = "30th June 2015";
+    $app['releasedlurl'] = "red-eclipse-v155-elysium-edition-";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
@@ -15,7 +15,7 @@
 
     // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releasedlurl'], 'nav' => 0, 'redir' => 1);
-    $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'osx' => 'for-os-x', 'os-x' => 'for-os-x', 'all' => 'combined-all', 'combined-all' => 'combined-all');
+    $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'mac' => 'for-mac', 'mac' => 'for-mac', 'all' => 'combined', 'combined-all' => 'combined');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
@@ -52,7 +52,7 @@
 
     $app['platform'] = "";
     if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "linux";
-    elseif (preg_match("/mac os x/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "os-x";
+    elseif (preg_match("/mac os/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "mac";
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "windows";
 
     $app['target'] = checkarg("target", "home");
@@ -105,220 +105,190 @@
         <link rel="shortcut icon" href="/bits/favicon.ico">
         <meta name="msapplication-TileColor" content="#440000">
         <meta name="msapplication-TileImage" content="/bits/mstile-144x144.png">
+        <meta name="msapplication-navbutton-color" content="#440000">
         <meta name="msapplication-config" content="/bits/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#440000">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link href="/bits/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/bits/style.css" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.css" rel="stylesheet">
-
-
     </head>
     <body>
-     <nav class="navbar  navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/home"><img src="/bits/redeclipse-small.png" alt="Red Eclipse">
-</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <?php echo $app['navbar']; ?>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-<div id="container">
-
-
-
-
-    <div class="row" id="main">
-		<div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 30px 0;">
-       	 	<h1>a free <b>arena shooter</b></h1>
-        	<h3>Fun for everyone, young and old!</h3>
-        	<h3>Available for Windows, GNU/Linux, BSD, and OS X</h3>
-        	<h3>Parkour, impulse boosts, dashing, and other tricks</h3>
-        	<h3>An array of mutators and variables</h3>
-        	<h3>Create your own maps cooperatively online</h3>
-
-
-        	<div class="col-xs12 col-sm-12 col-md-12">
-        		<a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary"><p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p><p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p></a>
-        	</div>
-
-        	<div class="col-xs12 col-sm-12 col-md-12">
-				<div class="btn-group">
-  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Mirrors<span class="caret"></span></button>
-  					<ul class="dropdown-menu" role="menu">
-    					<li><a href="/itchio">Itch.io</a><a href="/indiedb">IndieDB</a></li>
-  					</ul>
-				</div>
-				<div class="btn-group">
-  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Torrents<span class="caret"></span></button>
-  					<ul class="dropdown-menu" role="menu">
-    					<li><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_osx.tar.bz2.torrent">OS X</a><a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined</a></li>
-  					</ul>
-				</div>
-				<div class="btn-group">
-  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-right:0;">Help<span class="caret"></span></button>
-  					<ul class="dropdown-menu" role="menu">
-    					<li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a></li>
-  					</ul>
- 				</div>
- 			</div>
-
-        </div>
-
-	<div class="col-xs12 col-sm-12 col-md-6 video">
-    	<div class="embed-responsive embed-responsive-16by9">
-  			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oJRZHjyj7Zg?showinfo=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>
-
-
-</div>
-
-
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-
- <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active row">
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/001.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/001.jpg" alt="screenshot"></a>
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/002.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/002.jpg" alt="screenshot"></a>
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/003.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/003.jpg" alt="screenshot"></a>
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/004.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/004.jpg" alt="screenshot"></a>
-    </div>
-     <div class="item row">
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/005.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/005.jpg" alt="screenshot"></a>
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/006.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/006.jpg" alt="screenshot"></a>
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/007.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/007.jpg" alt="screenshot"></a>
-      		<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/008.jpg"  data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot" ><img class="img-responsive" src="/bits/thumbs/008.jpg" alt="screenshot"></a>
-
-    </div>
-  </div>
-
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon  glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<div class="row texte">
-	<div class="col-xs-12 col-sm-4 col-md-4">
-<p>Red Eclipse is a fun-filled new take on the first person arena shooter, built as a total conversion of <a href="http://www.cubeengine.com/">Cube Engine 2</a>, which lends itself toward a balanced gameplay, with a general theme of agility in a variety of environments. For more information, please see our <a href="/wiki">Wiki</a> or <a href="/forum">Forums</a>.</p>
-<p>The project is a <i>Free and Open Source</i> game, built on <a href="http://www.cubeengine.com/">Cube Engine 2</a> using <a href="http://libsdl.org/">SDL</a> and <a href="http://opengl.org/">OpenGL</a> which allows it to be ported to many platforms; you can <a href="/download">download a package</a> for <i>Windows, GNU/Linux, BSD, and OS X</i>, or grab a development copy from our <a href="/devel">Github</a> repository and live on the bleeding edge.</p>
-</div>
-
-
-	<div class="col-xs-12 col-sm-4 col-md-4">
-<p>In a true open source <i>by the people for the people</i> nature, we try to work closely with the gaming and open source communities to provide a better overall experience, aiming to create a game environment that is fun and easy to play, while still having elements to master.</p>
-<p>If you think you might have something to contribute to the game or community, please feel free to drop by our <a href="/chat">Chat</a> or <a href="/forum">Forums</a> and talk to us directly. We try to maintain a standard of friendly behaviour in our community, so don't be afraid to speak up and have your say in building this game for us all!</p>
-</div>
-
-
-
-	<div class="col-xs-12 col-sm-4 col-md-4 support">
-<h4>Support Us</h4>
-<p id="donatemsg">Red Eclipse is developed by volunteers, and you get it free of charge; your contributions keep this project alive. You're encouraged to get involved with the community and <a href="/contribute">help evolve the game</a>, or <a href="/donate">donate to our worthy cause</a>.</p>
-</div>
-
-</div>
-<div class="row footer">
-	<div class="col-xs-4 col-sm-2 col-md-2">
-            <a href="/indiedb">
-             <img src="/bits/indiedb.png" class="img-responsive"  alt="indiedb" id="indiedb" style="margin:auto">
-             </a>
+        <nav class="navbar  navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/home"><img src="/bits/redeclipse-small.png" alt="Red Eclipse"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                    <?php echo $app['navbar']; ?>
+                    </ul>
+                </div>
             </div>
-             <div class="col-xs-4 col-sm-2 col-md-2">
-             <a href="http://www.cubeengine.com/">
-             <img src="/bits/cube2.png" class="img-responsive" alt="cube2" id="cube2" style="margin:auto"></a>
+        </nav>
+        <div id="container">
+            <div class="row" id="main">
+                <div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 30px 0;">
+                    <h1>a free <b>arena shooter</b></h1>
+                    <h3>Fun for everyone, young and old!</h3>
+                    <h3>Available for Windows, GNU/Linux, BSD, and MacOS</h3>
+                    <h3>Parkour, impulse boosts, dashing, and other tricks</h3>
+                    <h3>An array of mutators and variables</h3>
+                    <h3>Create your own maps cooperatively online</h3>
+                    <div class="col-xs12 col-sm-12 col-md-12">
+                        <a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary">
+                            <p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p>
+                            <p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p>
+                        </a>
+                    </div>
+                    <div class="col-xs12 col-sm-12 col-md-12">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Mirrors<span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/itchio">Itch.io</a><a href="/indiedb">IndieDB</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Torrents<span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_mac.tar.bz2.torrent">MacOS</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-right:0;">Help<span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs12 col-sm-12 col-md-6 video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oJRZHjyj7Zg?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
-    <div class="col-xs-4 col-sm-4 col-md-2 col-sm-offset-4 col-md-offset-6 social-icons" style="padding: 20px 30px;">
-	  <a href="https://github.com/red-eclipse" target="_blank"><span class="fa fa-github-square"></span></a>
-      <a href="https://www.facebook.com/redeclipse.net" target="_blank"><span class="fa fa-facebook-square"></span></a>
-      <a href="https://plus.google.com/+redeclipsenet" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active row">
+                            <a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/001.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/001.jpg" alt="screenshot"></a>
+                            <a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/002.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/002.jpg" alt="screenshot"></a>
+                            <a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/003.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/003.jpg" alt="screenshot"></a>
+                            <a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/004.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/004.jpg" alt="screenshot"></a>
+                    </div>
+                <?php for ($x = 5; $x <= $app['screenshots']; $x++) {
+                    if (($x % 4) == 1) { echo '<div class="item row">'; }
+                    $y = $x;
+                    if ($x < 10) { $y = "00".$x; }
+                    elseif ($x < 100) { $y = "0".$x; }
+                    echo '<a class="col-xs-6 col-sm-3 col-md-3" style="padding:0" href="/bits/images/'.$y.'.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="screenshot"><img class="img-responsive" src="/bits/thumbs/'.$y.'.jpg" alt="screenshot"></a>';
+                    if (($x % 4) == 0) { echo '</div>'; }
+                } ?>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="row texte">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <p>Red Eclipse is a fun-filled new take on the first person arena shooter, built as a total conversion of <a href="http://www.cubeengine.com/">Cube Engine 2</a>, which lends itself toward a balanced gameplay, with a general theme of agility in a variety of environments. For more information, please see our <a href="/wiki">Wiki</a> or <a href="/forum">Forums</a>.</p>
+                    <p>The project is a <i>Free and Open Source</i> game, built on <a href="http://www.cubeengine.com/">Cube Engine 2</a> using <a href="http://libsdl.org/">SDL</a> and <a href="http://opengl.org/">OpenGL</a> which allows it to be ported to many platforms; you can <a href="/download">download a package</a> for <i>Windows, GNU/Linux, BSD, and MacOS</i>, or grab a development copy from our <a href="/devel">Github</a> repository and live on the bleeding edge.</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <p>In a true open source <i>by the people for the people</i> nature, we try to work closely with the gaming and open source communities to provide a better overall experience, aiming to create a game environment that is fun and easy to play, while still having elements to master.</p>
+                    <p>If you think you might have something to contribute to the game or community, please feel free to drop by our <a href="/chat">Chat</a> or <a href="/forum">Forums</a> and talk to us directly. We try to maintain a standard of friendly behaviour in our community, so don't be afraid to speak up and have your say in building this game for us all!</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 support">
+                    <h4>Support Us</h4>
+                    <p id="donatemsg">Red Eclipse is developed by volunteers, and you get it free of charge; your contributions keep this project alive. You're encouraged to get involved with the community and <a href="/contribute">help evolve the game</a>, or <a href="/donate">donate to our worthy cause</a>.</p>
+                </div>
+            </div>
+            <div class="row footer">
+                <div class="col-xs-4 col-sm-2 col-md-2">
+                    <a href="/indiedb"><img src="/bits/indiedb.png" class="img-responsive"  alt="indiedb" id="indiedb" style="margin:auto"></a>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-2">
+                    <a href="http://www.cubeengine.com/"><img src="/bits/cube2.png" class="img-responsive" alt="cube2" id="cube2" style="margin:auto"></a>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-2 col-sm-offset-4 col-md-offset-6 social-icons" style="padding: 20px 30px;">
+                  <a href="https://github.com/red-eclipse" target="_blank"><span class="fa fa-github-square"></span></a>
+                  <a href="https://www.facebook.com/redeclipse.net" target="_blank"><span class="fa fa-facebook-square"></span></a>
+                  <a href="https://plus.google.com/+redeclipsenet" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+                </div>
+            </div>
+            <div id="copyright" style="text-align: center">
+                <p>Red Eclipse, Copyright &copy; 2009-2016 Quinton Reeves, Lee Salzman</p>
+                <p>Cube Engine 2, Copyright &copy; 2001-2016 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</p>
+                <p><a href="http://remiclouet.com" target="_blank">Website by R&eacute;mi Clouet d'Orval</a></p>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="/bits/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function ($) {
 
-    </div>
-   </div>
- <div id="copyright" style="text-align: center">
-<p>Red Eclipse, Copyright &copy; 2009-2016 Quinton Reeves, Lee Salzman</p>
-<p>Cube Engine 2, Copyright &copy; 2001-2016 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</p>
-<p><a href="http://remiclouet.com" target="_blank">Website by R&eacute;mi Clouet d'Orval</a></p>
-</div>
-</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/bits/js/bootstrap.min.js"></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
-<script type="text/javascript">
-        $(document).ready(function ($) {
-
-            // delegate calls to data-toggle="lightbox"
-            $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
-                event.preventDefault();
-                return $(this).ekkoLightbox({
-                    onShown: function() {
-                        if (window.console) {
-                            return console.log('Checking our the events huh?');
+                // delegate calls to data-toggle="lightbox"
+                $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+                    event.preventDefault();
+                    return $(this).ekkoLightbox({
+                        onShown: function() {
+                            if (window.console) {
+                                return console.log('Checking our the events huh?');
+                            }
+                        },
+                        onNavigate: function(direction, itemIndex) {
+                            if (window.console) {
+                                return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                            }
                         }
-                    },
-                    onNavigate: function(direction, itemIndex) {
-                        if (window.console) {
-                            return console.log('Navigating '+direction+'. Current item: '+itemIndex);
-                        }
-                    }
+                    });
                 });
-            });
 
-            //Programatically call
-            $('#open-image').click(function (e) {
-                e.preventDefault();
-                $(this).ekkoLightbox();
-            });
-            $('#open-youtube').click(function (e) {
-                e.preventDefault();
-                $(this).ekkoLightbox();
-            });
-
-            $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
-                event.preventDefault();
-                return $(this).ekkoLightbox({
-                    onShown: function() {
-                        var a = this.modal_content.find('.modal-footer a');
-                        if(a.length > 0) {
-                            a.click(function(e) {
-                                e.preventDefault();
-                                this.navigateTo(2);
-                            }.bind(this));
-                        }
-                    }
+                //Programatically call
+                $('#open-image').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
                 });
+                $('#open-youtube').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+
+                $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+                    event.preventDefault();
+                    return $(this).ekkoLightbox({
+                        onShown: function() {
+                            var a = this.modal_content.find('.modal-footer a');
+                            if(a.length > 0) {
+                                a.click(function(e) {
+                                    e.preventDefault();
+                                    this.navigateTo(2);
+                                }.bind(this));
+                            }
+                        }
+                    });
+                });
+
             });
-
-        });
-</script>
-
+        </script>
         <script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -328,7 +298,6 @@
             ga('require', 'linkid', 'linkid.js');
             ga('send', 'pageview');
         </script>
-
     </body>
 </html>
 <?php } ?>
