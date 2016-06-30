@@ -15,7 +15,7 @@
 
     // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releasedlurl'], 'nav' => 0, 'redir' => 1);
-    $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'mac' => 'for-mac', 'mac' => 'for-mac', 'all' => 'combined-all', 'combined-all' => 'combined-all');
+    $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'mac' => 'for-mac', 'mac' => 'for-mac', 'all' => 'combined', 'combined-all' => 'combined');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
