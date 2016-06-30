@@ -14,7 +14,7 @@
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar
-    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releasedlurl'], 'nav' => 0, 'redir' => 1);
+    $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://redeclipse.itch.io/red-eclipse/purchase', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releasedlurl'], 'nav' => 0, 'redir' => 1);
     $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'mac' => 'for-mac', 'mac' => 'for-mac', 'all' => 'combined', 'combined-all' => 'combined');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
@@ -143,16 +143,16 @@
                     <h3>An array of mutators and variables</h3>
                     <h3>Create your own maps cooperatively online</h3>
                     <div class="col-xs12 col-sm-12 col-md-12">
-                        <a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary">
+                        <a href="/download" id="button" class="btn btn-primary">
                             <p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p>
                             <p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p>
                         </a>
                     </div>
                     <div class="col-xs12 col-sm-12 col-md-12">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Mirrors<span class="caret"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Platforms<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/itchio">Itch.io</a><a href="/indiedb">IndieDB</a></li>
+                                <li><a href="/download/windows">Windows</a> <a href="/download/linux">Linux/BSD</a> <a href="/download/mac">MacOS</a> <a href="/download/combined">Combined/All</a></li>
                             </ul>
                         </div>
                         <div class="btn-group">
