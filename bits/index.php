@@ -160,9 +160,9 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a>
-                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux/BSD</a>
                                     <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_mac.tar.bz2.torrent">MacOS</a>
-                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined</a>
+                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined/All</a>
                                 </li>
                             </ul>
                         </div>
