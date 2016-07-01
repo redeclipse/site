@@ -2,7 +2,7 @@
     $app['releasever'] = "1.5.5";
     $app['releasename'] = "Elysium Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
-    $app['releasedate'] = "30th June 2015";
+    $app['releasedate'] = "30th June 2016";
     $app['releasedlurl'] = "red-eclipse-v155-elysium-edition-";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
