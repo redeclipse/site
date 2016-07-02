@@ -144,19 +144,19 @@
                     <h3>Create your own maps cooperatively online</h3>
                     <div class="col-xs12 col-sm-12 col-md-12">
                         <a href="/download" id="button" class="btn btn-primary">
-                            <p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p>
+                            <p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> Donate &amp; Download</p>
                             <p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p>
                         </a>
                     </div>
                     <div class="col-xs12 col-sm-12 col-md-12">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Platforms<span class="caret"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Free Downloads<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/download/windows">Windows</a> <a href="/download/linux">Linux/BSD</a> <a href="/download/mac">MacOS</a> <a href="/download/combined">Combined/All</a></li>
                             </ul>
                         </div>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Torrents<span class="caret"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Free Torrents<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a>
@@ -167,9 +167,9 @@
                             </ul>
                         </div>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-right:0;">Help<span class="caret"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-right:0;">Help &amp; Support<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a></li>
+                                <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a> <a href="/forums">Discussion Forums</a> <a href="/chat">Live Chat</a></li>
                             </ul>
                         </div>
                     </div>
