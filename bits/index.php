@@ -25,6 +25,7 @@
     $app['targets']['guide'] = array('name' => 'Guide', 'url' => 'http://redeclipse.net/wiki/Guide', 'nav' => 1, 'redir' => 1);
     $app['targets']['install'] = array('name' => 'Install', 'url' => 'http://redeclipse.net/wiki/How_to_Install_Red_Eclipse', 'nav' => 1, 'redir' => 1);
     $app['targets']['contribute'] = array('name' => 'Contribute', 'url' => 'http://redeclipse.net/wiki/How_to_Contribute_to_Red_Eclipse', 'nav' => 1, 'redir' => 1);
+    $app['targets']['stats'] = array('name' => 'Statistics', 'url' => 'http://play.redeclipse.net:28700/', 'alturl' => 'http://play.redeclipse.net:28700/', 'nav' => 1, 'redir' => 1);
     $app['targets']['servers'] = array('name' => 'Servers', 'url' => 'http://redflare.ofthings.net/', 'alturl' => 'http://redflare.ofthings.net/', 'nav' => 1, 'redir' => 1);
 
     $app['targets']['facebook'] = array('name' => 'Facebook', 'url' => 'http://www.facebook.com/redeclipse.net', 'nav' => 0, 'redir' => 1);
