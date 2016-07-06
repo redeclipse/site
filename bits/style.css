@@ -78,7 +78,7 @@ body {
 a {
     color: rgb(255, 190, 190);
 }
-a: hover {
+a:hover {
     color: rgb(255, 190, 190);
 }
 .navbar-inverse {
@@ -88,7 +88,7 @@ a: hover {
 .navbar-inverse .navbar-nav > li > a {
     color: #fcc;
 }
-.navbar-toggle{
+.navbar-toggle {
 	margin-top: 23px;
 }
 .navbar-nav > li > a {
@@ -105,7 +105,7 @@ a: hover {
         padding-top: 10px;
 	}
 }
-.navbar-nav > li > a: hover {
+.navbar-nav > li > a:hover {
    	text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 3px rgb(255, 128, 128);
 	-moz-box-shadow: inset 0px 0px 40px 0px rgba(50, 0, 0, 0.5);
     -webkit-box-shadow: inset 0px 0px 40px 0px rgba(255, 0, 0.5);
@@ -116,7 +116,7 @@ a: hover {
   height: auto;
   padding: 0;
 }
-.navbar-brand: hover{
+.navbar-brand:hover {
 	 text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 3px rgb(255, 128, 128);
 }
 h1 {
@@ -166,7 +166,7 @@ h4 {
 	-webkit-transition: all 0.15s linear 0s;
 	text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 3px rgb(255, 128, 128);
 }
-.btn-primary: hover {
+.btn-primary:hover {
 	background-color: rgb(0, 180, 180);
 	box-shadow: inset 0px 1px 0px 0px rgba(0, 255, 255, 1), inset 0px 0px 40px 0px rgba(0, 255, 255, 1), 0px 0px 20px 0px rgba(0, 255, 255, 1);
 	-moz-box-box-shadow: inset 0px 1px 0px 0px rgba(0, 255, 255, 1), inset 0px 0px 40px 0px rgba(0, 255, 255, 1), 0px 0px 20px 0px rgba(0, 255, 255, 1);
