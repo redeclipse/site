@@ -62,7 +62,7 @@ a:hover { color:rgb(255,190,190); }
 h1 {
 	color:rgb(255,255,255);
 	margin-top:0;
-	font-family: Orbitron;
+	font-family: Ruda;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.5em;
@@ -81,7 +81,7 @@ h3 {
 	font-family:Ruda; font-weight:900; font-size:14px; margin:10px}
 h4 {
 	margin-top:0;
-	font-family: Orbitron;
+	font-family: Ruda;
     font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
@@ -131,7 +131,7 @@ h4 {
 }
 .download {
 	font-size:21px;
-    font-family: Orbitron;
+    font-family: Ruda;
     font-weight:900;
     padding:0;
     margin:0;
@@ -176,7 +176,7 @@ h4 {
 .footer{
 	background-color:#600;
 	font-size:14px;
-	font-family:Orbitron;
+	font-family:Ruda;
 }
 .social-icons{
 	font-size:30px;
