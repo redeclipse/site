@@ -110,10 +110,10 @@
         <meta name="msapplication-config" content="/bits/browserconfig.xml">
         <meta name="theme-color" content="#440000">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/bits/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/bits/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/bits/style.css" />
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/bits/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/bits/ekko-lightbox.min.css">
     </head>
     <body>
         <nav class="navbar  navbar-inverse navbar-static-top">
@@ -240,65 +240,10 @@
                 <p><a href="http://remiclouet.com" target="_blank">Website by R&eacute;mi Clouet d'Orval</a></p>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="/bits/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function ($) {
-
-                // delegate calls to data-toggle="lightbox"
-                $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
-                    event.preventDefault();
-                    return $(this).ekkoLightbox({
-                        onShown: function() {
-                            if (window.console) {
-                                return console.log('Checking our the events huh?');
-                            }
-                        },
-                        onNavigate: function(direction, itemIndex) {
-                            if (window.console) {
-                                return console.log('Navigating '+direction+'. Current item: '+itemIndex);
-                            }
-                        }
-                    });
-                });
-
-                //Programatically call
-                $('#open-image').click(function (e) {
-                    e.preventDefault();
-                    $(this).ekkoLightbox();
-                });
-                $('#open-youtube').click(function (e) {
-                    e.preventDefault();
-                    $(this).ekkoLightbox();
-                });
-
-                $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
-                    event.preventDefault();
-                    return $(this).ekkoLightbox({
-                        onShown: function() {
-                            var a = this.modal_content.find('.modal-footer a');
-                            if(a.length > 0) {
-                                a.click(function(e) {
-                                    e.preventDefault();
-                                    this.navigateTo(2);
-                                }.bind(this));
-                            }
-                        }
-                    });
-                });
-
-            });
-        </script>
-        <script type="text/javascript">
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-45886576-1', 'redeclipse.net');
-            ga('require', 'linkid', 'linkid.js');
-            ga('send', 'pageview');
-        </script>
+        <script type="text/javascript" src="/bits/jquery.min.js"></script>
+        <script type="text/javascript" src="/bits/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/bits/ekko-lightbox.min.js"></script>
+        <script type="text/javascript" src="/bits/site.js"></script>
     </body>
 </html>
 <?php } ?>
