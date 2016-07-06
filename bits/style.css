@@ -1,5 +1,61 @@
 @charset "utf-8";
 @font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Orbitron-Light'), local('Orbitron-Regular'), url(/bits/orbitron-regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Orbitron-Black'), url(/bits/orbitron-black.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(/bits/oswald-light1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(/bits/oswald-light2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(/bits/oswald-regular1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(/bits/oswald-regular2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(/bits/oswald-bold1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(/bits/oswald-bold2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
   font-family: 'Ruda';
   font-style: normal;
   font-weight: 400;
@@ -62,7 +118,7 @@ a:hover { color:rgb(255,190,190); }
 h1 {
 	color:rgb(255,255,255);
 	margin-top:0;
-	font-family: Ruda;
+	font-family: Orbitron;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.5em;
@@ -81,7 +137,7 @@ h3 {
 	font-family:Ruda; font-weight:900; font-size:14px; margin:10px}
 h4 {
 	margin-top:0;
-	font-family: Ruda;
+	font-family: Orbitron;
     font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
@@ -131,7 +187,7 @@ h4 {
 }
 .download {
 	font-size:21px;
-    font-family: Ruda;
+    font-family: Orbitron;
     font-weight:900;
     padding:0;
     margin:0;
@@ -176,7 +232,7 @@ h4 {
 .footer{
 	background-color:#600;
 	font-size:14px;
-	font-family:Ruda;
+	font-family:Orbitron;
 }
 .social-icons{
 	font-size:30px;
