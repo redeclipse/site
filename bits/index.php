@@ -177,7 +177,7 @@
                 </div>
                 <div class="col-xs12 col-sm-12 col-md-6 video">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oJRZHjyj7Zg?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $app['youtubevid']; ?>?showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
