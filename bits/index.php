@@ -5,7 +5,7 @@
     $app['releasedate'] = "13th September 2016";
     $app['releasedlurl'] = "red-eclipse-v156-elysium-patch-";
     $app['background'] = "/bits/background_01.jpg";
-    $app['youtubevid'] = "oJRZHjyj7Zg";
+    $app['youtubevid'] = "3OJObouzCQk";
     $app['screenshots'] = 84;
 
     $app['banner'] = $app['releasefull']." (".$app['releasedate'].")";
@@ -138,7 +138,7 @@
             <div class="row" id="main">
                 <div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 30px 0;">
                     <h1>a free <b>arena shooter</b></h1>
-                    <h3>Fun for everyone, young and old!</h3>
+                    <h3><b><a href="/indiedb">VOTE US FOR INDIE OF THE YEAR 2016!</a></b></h3>
                     <h3>Available for Windows, GNU/Linux, BSD, and MacOS</h3>
                     <h3>Parkour, impulse boosts, dashing, and other tricks</h3>
                     <h3>An array of mutators and variables</h3>
