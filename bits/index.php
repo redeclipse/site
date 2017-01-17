@@ -56,16 +56,16 @@
     if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
 
     $app['download'] = array(
-        'win' => $app['releasefile'].'win.exe', 
+        'win' => $app['releasefile'].'win.exe',
         'windows' => $app['releasefile'].'win.exe',
-        'nix' => $app['releasefile'].'nix.tar.bz2', 
-        'linux' => $app['releasefile'].'nix.tar.bz2', 
-        'bsd' => $app['releasefile'].'nix.tar.bz2', 
-        'mac' => $app['releasefile'].'mac.tar.bz2', 
-        'macos' => $app['releasefile'].'mac.tar.bz2', 
-        'macosx' => $app['releasefile'].'mac.tar.bz2', 
-        'combined' => $app['releasefile'].'combined.tar.bz2'
-        'all' => $app['releasefile'].'combined.tar.bz2', 
+        'nix' => $app['releasefile'].'nix.tar.bz2',
+        'linux' => $app['releasefile'].'nix.tar.bz2',
+        'bsd' => $app['releasefile'].'nix.tar.bz2',
+        'mac' => $app['releasefile'].'mac.tar.bz2',
+        'macos' => $app['releasefile'].'mac.tar.bz2',
+        'macosx' => $app['releasefile'].'mac.tar.bz2',
+        'combined' => $app['releasefile'].'combined.tar.bz2',
+        'all' => $app['releasefile'].'combined.tar.bz2'
     );
 
     $title = checkarg("title");
