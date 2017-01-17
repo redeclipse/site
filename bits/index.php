@@ -14,7 +14,7 @@
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar
-    $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'], 'nav' => 0, 'redir' => 1);
+    $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'].'/', 'nav' => 0, 'redir' => 1);
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
