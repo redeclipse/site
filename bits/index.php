@@ -53,7 +53,7 @@
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "win";
 
     $app['target'] = checkarg("target", "home");
-    if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
+    if (($app['target'] != "torrent") && !isset($app['targets'][$app['target']])) $app['target'] = "home";
 
     $app['download'] = array(
         'win' => $app['releasefile'].'win.exe',
