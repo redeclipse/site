@@ -1,9 +1,8 @@
 <?php
-    $app['releasever'] = "1.5.6";
+    $app['releasever'] = "1.5.8";
     $app['releasename'] = "Elysium Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
-    $app['releasedate'] = "13th September 2016";
-    $app['releasedlurl'] = "red-eclipse-v156-elysium-patch-";
+    $app['releasedate'] = "17th January 2017";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "3OJObouzCQk";
     $app['screenshots'] = 84;
@@ -14,8 +13,8 @@
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar
-    $app['targets']['download'] = array('name' => 'Download', 'url' => 'http://www.indiedb.com/games/red-eclipse/downloads', 'alturl' => 'http://www.indiedb.com/games/red-eclipse/downloads/'.$app['releasedlurl'], 'nav' => 0, 'redir' => 1);
-    $app['download'] = array('windows' => 'for-windows', 'win' => 'for-windows', 'linux' => 'for-linux', 'bsd' => 'for-linux', 'nix' => 'for-linux', 'mac' => 'for-mac', 'mac' => 'for-mac', 'all' => 'combined', 'combined-all' => 'combined');
+    $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'], 'nav' => 0, 'redir' => 1);
+    $app['download'] = array('windows' => 'win.exe', 'win' => 'win.exe', 'linux' => 'linux.tar.bz2', 'bsd' => 'linux.tar.bz2', 'nix' => 'linux.tar.bz2', 'mac' => 'mac.tar.bz2', 'mac' => 'mac.tar.bz2', 'all' => 'combined.tar.bz2', 'combined-all' => 'combined.tar.bz2');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
@@ -30,10 +29,7 @@
 
     $app['targets']['facebook'] = array('name' => 'Facebook', 'url' => 'http://www.facebook.com/redeclipse.net', 'nav' => 0, 'redir' => 1);
     $app['targets']['youtube'] = array('name' => 'Youtube', 'url' => 'http://www.youtube.com/results?search_query=%22Red%20Eclipse%22', 'alturl' => 'http://www.youtube.com/results?search_query=%22Red%20Eclipse%22+', 'nav' => 0, 'redir' => 1);
-
     $app['targets']['itchio'] = array('name' => 'Itch.io', 'url' => 'http://redeclipse.itch.io/red-eclipse', 'nav' => 0, 'redir' => 1);
-    $app['targets']['indiedb'] = array('name' => 'IndieDB', 'url' => 'http://www.indiedb.com/games/red-eclipse', 'nav' => 0, 'redir' => 1);
-
     $app['targets']['google'] = array('name' => 'Google', 'url' => 'http://www.google.com/search?q=%22Red%20Eclipse%22', 'alturl' => 'http://www.google.com/search?q=%22Red%20Eclipse%22+', 'nav' => -1, 'redir' => 1);
 
     $app['targets']['svn'] = array('name' => 'SVN', 'url' => 'http://svn.icculus.org/redeclipse/', 'alturl' => 'http://svn.icculus.org/redeclipse/?view=rev&revision=', 'nav' => -1, 'redir' => 1);
@@ -57,7 +53,6 @@
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "windows";
 
     $app['target'] = checkarg("target", "home");
-    if ($app['target'] == "desura") $app['target'] = "indiedb";
     if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
 
     $title = checkarg("title");
@@ -138,7 +133,7 @@
             <div class="row" id="main">
                 <div class="col-xs12 col-sm-12 col-md-6" style="text-align:center; padding:22px 0 30px 0;">
                     <h1>a free <b>arena shooter</b></h1>
-                    <h3><b><a href="/indiedb">VOTE US FOR INDIE OF THE YEAR 2016!</a></b></h3>
+                    <h3>Fun for everyone, young and old, noob or expert.</h3>
                     <h3>Available for Windows, GNU/Linux, BSD, and MacOS</h3>
                     <h3>Parkour, impulse boosts, dashing, and other tricks</h3>
                     <h3>An array of mutators and variables</h3>
@@ -222,9 +217,6 @@
                 </div>
             </div>
             <div class="row footer">
-                <div class="col-xs-4 col-sm-2 col-md-2">
-                    <a href="/indiedb"><img src="/bits/indiedb.png" class="img-responsive"  alt="indiedb" id="indiedb" style="margin:auto"></a>
-                </div>
                 <div class="col-xs-4 col-sm-2 col-md-2">
                     <a href="http://www.cubeengine.com/"><img src="/bits/cube2.png" class="img-responsive" alt="cube2" id="cube2" style="margin:auto"></a>
                 </div>
