@@ -70,8 +70,11 @@
 
     $title = checkarg("title");
     if ($app['targets'][$app['target']]['redir']) {
-        if (($app['target'] == "download") && ($title != "")) {
-            if (isset($app['download'][$title])) $title = $app['download'][$title];
+        if ((($app['target'] == "download") || ($app['target'] == "torrent")) && ($title != "")) {
+            if (isset($app['download'][$title])) {
+                if ($app['target'] == "torrent") $title = $app['download'][$title].'.torrent';
+                else $title = $app['download'][$title];
+            }
             else $title = "";
         }
         $app['url'] = $title != "" ? (
@@ -167,12 +170,7 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Torrent Downloads<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="/files/releases/<?php echo $app['download']['win']; ?>.torrent">Windows</a>
-                                    <a href="/files/releases/<?php echo $app['download']['nix']; ?>.torrent">Linux/BSD</a>
-                                    <a href="/files/releases/<?php echo $app['download']['mac']; ?>.torrent">macOS</a>
-                                    <a href="/files/releases/<?php echo $app['download']['combined']; ?>.torrent">Combined/All</a>
-                                </li>
+                                <li><a href="/torrent/win">Windows</a> <a href="/torrent/nix">Linux/BSD</a> <a href="/torrent/mac">MacOS</a> <a href="/torrent/combined">Combined/All</a></li>
                             </ul>
                         </div>
                         <div class="btn-group">
