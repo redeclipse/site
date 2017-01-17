@@ -2,6 +2,7 @@
     $app['releasever'] = "1.5.8";
     $app['releasename'] = "Elysium Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
+    $app['releasefile'] = "redeclipse_".$app['releasever']."_";
     $app['releasedate'] = "17th January 2017";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "3OJObouzCQk";
@@ -14,7 +15,6 @@
 
     // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'], 'nav' => 0, 'redir' => 1);
-    $app['download'] = array('windows' => 'win.exe', 'win' => 'win.exe', 'linux' => 'linux.tar.bz2', 'bsd' => 'linux.tar.bz2', 'nix' => 'linux.tar.bz2', 'mac' => 'mac.tar.bz2', 'mac' => 'mac.tar.bz2', 'all' => 'combined.tar.bz2', 'combined-all' => 'combined.tar.bz2');
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
@@ -48,12 +48,25 @@
     }
 
     $app['platform'] = "";
-    if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "linux";
+    if (preg_match("/linux/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "nix";
     elseif (preg_match("/mac os/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "mac";
-    elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "windows";
+    elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "win";
 
     $app['target'] = checkarg("target", "home");
     if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
+
+    $app['download'] = array(
+        'win' => $app['releasefile'].'win.exe', 
+        'windows' => $app['releasefile'].'win.exe',
+        'nix' => $app['releasefile'].'nix.tar.bz2', 
+        'linux' => $app['releasefile'].'nix.tar.bz2', 
+        'bsd' => $app['releasefile'].'nix.tar.bz2', 
+        'mac' => $app['releasefile'].'mac.tar.bz2', 
+        'macos' => $app['releasefile'].'mac.tar.bz2', 
+        'macosx' => $app['releasefile'].'mac.tar.bz2', 
+        'combined' => $app['releasefile'].'combined.tar.bz2'
+        'all' => $app['releasefile'].'combined.tar.bz2', 
+    );
 
     $title = checkarg("title");
     if ($app['targets'][$app['target']]['redir']) {
@@ -148,17 +161,17 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Platform Downloads<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/download/windows">Windows</a> <a href="/download/linux">Linux/BSD</a> <a href="/download/mac">MacOS</a> <a href="/download/combined">Combined/All</a></li>
+                                <li><a href="/download/win">Windows</a> <a href="/download/nix">Linux/BSD</a> <a href="/download/mac">MacOS</a> <a href="/download/combined">Combined/All</a></li>
                             </ul>
                         </div>
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Torrent Downloads<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_win.exe.torrent">Windows</a>
-                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_nix.tar.bz2.torrent">Linux/BSD</a>
-                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_mac.tar.bz2.torrent">MacOS</a>
-                                    <a href="/files/releases/redeclipse_<?php echo $app['releasever']; ?>_combined.tar.bz2.torrent">Combined/All</a>
+                                    <a href="/files/releases/<?php echo $app['download']['win']; ?>.torrent">Windows</a>
+                                    <a href="/files/releases/<?php echo $app['download']['nix']; ?>.torrent">Linux/BSD</a>
+                                    <a href="/files/releases/<?php echo $app['download']['mac']; ?>.torrent">macOS</a>
+                                    <a href="/files/releases/<?php echo $app['download']['combined']; ?>.torrent">Combined/All</a>
                                 </li>
                             </ul>
                         </div>
