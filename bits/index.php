@@ -15,6 +15,7 @@
 
     // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'].'/', 'nav' => 0, 'redir' => 1);
+    $app['targets']['torrent'] = $app['targets']['download'];
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'http://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
@@ -53,7 +54,7 @@
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "win";
 
     $app['target'] = checkarg("target", "home");
-    if (($app['target'] != "torrent") && !isset($app['targets'][$app['target']])) $app['target'] = "home";
+    if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
 
     $app['download'] = array(
         'win' => $app['releasefile'].'win.exe',
