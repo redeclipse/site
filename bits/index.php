@@ -5,7 +5,7 @@
     $app['releasefile'] = "redeclipse_".$app['releasever']."_";
     $app['releasedate'] = "17th January 2017";
     $app['background'] = "/bits/background_01.jpg";
-    $app['youtubevid'] = "3OJObouzCQk";
+    $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
 
     $app['banner'] = $app['releasefull']." (".$app['releasedate'].")";
