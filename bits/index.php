@@ -31,6 +31,7 @@
     $app['targets']['facebook'] = array('name' => 'Facebook', 'url' => 'http://www.facebook.com/redeclipse.net', 'nav' => 0, 'redir' => 1);
     $app['targets']['youtube'] = array('name' => 'Youtube', 'url' => 'http://www.youtube.com/results?search_query=%22Red%20Eclipse%22', 'alturl' => 'http://www.youtube.com/results?search_query=%22Red%20Eclipse%22+', 'nav' => 0, 'redir' => 1);
     $app['targets']['itchio'] = array('name' => 'Itch.io', 'url' => 'http://redeclipse.itch.io/red-eclipse', 'nav' => 0, 'redir' => 1);
+    $app['targets']['gamejolt'] = array('name' => 'Gamejolt', 'url' => 'http://gamejolt.com/games/red-eclipse/73896', 'alturl' => 'http://gamejolt.com/games/red-eclipse/73896/', 'nav' => 0, 'redir' => 1);
     $app['targets']['google'] = array('name' => 'Google', 'url' => 'http://www.google.com/search?q=%22Red%20Eclipse%22', 'alturl' => 'http://www.google.com/search?q=%22Red%20Eclipse%22+', 'nav' => -1, 'redir' => 1);
 
     $app['targets']['svn'] = array('name' => 'SVN', 'url' => 'http://svn.icculus.org/redeclipse/', 'alturl' => 'http://svn.icculus.org/redeclipse/?view=rev&revision=', 'nav' => -1, 'redir' => 1);
@@ -44,6 +45,8 @@
     $app['targets']['tracker'] = array('name' => 'Tracker', 'url' => 'http://redeclipse.net/forum/viewforum.php?f=9', 'alturl' => 'http://redeclipse.net/forum/viewforum.php?f=9&t=', 'nav' => 0, 'redir' => 1);
     $app['targets']['forums'] = array('name' => 'Forums', 'url' => 'http://redeclipse.net/forum/index.php', 'alturl' => 'http://redeclipse.net/forum/index.php?t=', 'nav' => 0, 'redir' => 1);
 
+    $app['remaps']['indiedb'] = 'gamejolt';
+
     function checkarg($arg = "", $def = "") {
         return isset($_GET[$arg]) && $_GET[$arg] != "" ? $_GET[$arg] : $def;
     }
@@ -54,7 +57,14 @@
     elseif (preg_match("/windows|win32/i", $_SERVER['HTTP_USER_AGENT'])) $app['platform'] = "win";
 
     $app['target'] = checkarg("target", "home");
-    if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
+    if (!isset($app['targets'][$app['target']]))
+    {
+        if (!isset($app['remaps'][$app['target']])) $app['target'] = "home";
+        else {
+            $app['target'] = $app['remaps'][$app['target']];
+            if (!isset($app['targets'][$app['target']])) $app['target'] = "home";
+        }
+    }
 
     $app['download'] = array(
         'win' => $app['releasefile'].'win.exe',
@@ -65,6 +75,7 @@
         'mac' => $app['releasefile'].'mac.tar.bz2',
         'macos' => $app['releasefile'].'mac.tar.bz2',
         'macosx' => $app['releasefile'].'mac.tar.bz2',
+        'osx' => $app['releasefile'].'mac.tar.bz2',
         'combined' => $app['releasefile'].'combined.tar.bz2',
         'all' => $app['releasefile'].'combined.tar.bz2'
     );
@@ -175,6 +186,12 @@
                             </ul>
                         </div>
                         <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Other Sources<span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/gamejolt">Gamejolt</a> <a href="/itchio">Itch.io</a> <a href="/download">GitHub</a>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-right:0;">Help &amp; Support<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a> <a href="/forums">Discussion Forums</a> <a href="/chat">Live Chat</a></li>
@@ -231,6 +248,9 @@
             <div class="row footer">
                 <div class="col-xs-4 col-sm-2 col-md-2">
                     <a href="http://www.cubeengine.com/"><img src="/bits/cube2.png" class="img-responsive" alt="cube2" id="cube2" style="margin:auto"></a>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-2">
+                    <a href="/gamejolt"><img src="/bits/gamejolt.png" class="img-responsive" alt="gamejolt" id="gamejolt" style="margin:auto"></a>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-2 col-sm-offset-4 col-md-offset-6 social-icons" style="padding: 20px 30px;">
                   <a href="https://github.com/red-eclipse" target="_blank"><span class="fa fa-github-square"></span></a>
