@@ -6,7 +6,7 @@ php_value post_max_size 32M
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www.redeclipse.net$ [OR,NC]
 RewriteCond %{HTTP_HOST} ^play.redeclipse.net$
-RewriteRule ^(.*)$ http://redeclipse.net/$1 [R=301,L,NC]
+RewriteRule ^(.*)$ https://redeclipse.net/$1 [R=301,L,NC]
 
 RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/mediawiki/index.php [QSA,L,NC]
 
