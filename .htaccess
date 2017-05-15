@@ -13,7 +13,7 @@ RewriteRule ^(.*)$ https://redeclipse.net/$1 [R=301,L,NC]
 
 RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/mediawiki/index.php [QSA,L,NC]
 
-RewriteRule ^home$ https://redeclipse.net/$1 [R=301,L,NC]
+RewriteRule ^home$ https://redeclipse.net/ [R=301,L,NC]
 
 RewriteRule ^(download|torrent|tracker|svn|git|gamejolt|google|facebook|youtube|stats)/(.+)$ /bits/index.php?target=$1&title=$2 [QSA,L,NC]
 RewriteRule ^(tracker|servers|stats|download|torrent|chat|svn|git|google|facebook|youtube|itchio|desura|indiedb|gamejolt|devel|guidelines|faq|guide|install|contribute|trademark|license|readme|apply|donate|forums)$ /bits/index.php?target=$1 [QSA,L,NC]
