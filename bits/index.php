@@ -167,7 +167,7 @@
                     <h3>An array of mutators and variables</h3>
                     <h3>Create your own maps cooperatively online</h3>
                     <div class="col-xs12 col-sm-12 col-md-12">
-                        <a href="/download/<?php echo $app['platform']; ?>" id="button" class="btn btn-primary">
+                        <a href="/download<?php echo $app['platform'] != "" ? '/'.$app['platform'] : ""; ?>" id="button" class="btn btn-primary">
                             <p class="download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> FREE DOWNLOAD</p>
                             <p class="version"><?php echo $app['releasefull']; ?> released <?php echo $app['releasedate']; ?></p>
                         </a>
