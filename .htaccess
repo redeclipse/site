@@ -11,6 +11,8 @@ RewriteCond %{HTTP_HOST} ^www.redeclipse.net$ [OR,NC]
 RewriteCond %{HTTP_HOST} ^play.redeclipse.net$
 RewriteRule ^(.*)$ https://redeclipse.net/$1 [R=301,L,NC]
 
+RewriteRule ^appimage/(.+)/(.+)$ https://github.com/red-eclipse/deploy/releases/download/appimage_continuous_$1/$2 [R=302,L,NC]
+
 RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/mediawiki/index.php [QSA,L,NC]
 
 RewriteRule ^home$ https://redeclipse.net/ [R=301,L,NC]
