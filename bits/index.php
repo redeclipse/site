@@ -34,8 +34,10 @@
     $app['targets']['gamejolt'] = array('name' => 'Gamejolt', 'url' => 'https://gamejolt.com/games/red-eclipse/73896', 'alturl' => 'https://gamejolt.com/games/red-eclipse/73896/', 'nav' => 0, 'redir' => 1);
     $app['targets']['google'] = array('name' => 'Google', 'url' => 'https://www.google.com/search?q=%22Red%20Eclipse%22', 'alturl' => 'https://www.google.com/search?q=%22Red%20Eclipse%22+', 'nav' => -1, 'redir' => 1);
 
-    $app['targets']['svn'] = array('name' => 'SVN', 'url' => 'https://svn.icculus.org/redeclipse/', 'alturl' => 'https://svn.icculus.org/redeclipse/?view=rev&revision=', 'nav' => -1, 'redir' => 1);
+    $app['targets']['appimage'] = array('name' => 'AppImage', 'url' => 'https://github.com/red-eclipse/deploy/releases', 'alturl' => 'https://github.com/red-eclipse/deploy/releases/tag/appimage_continuous_', 'nav' => -1, 'redir' => 1);
+    $app['targets']['svn'] = array('name' => 'SVN', 'url' => 'https://github.com/red-eclipse/', 'alturl' => 'https://svn.icculus.org/redeclipse/?view=rev&revision=', 'nav' => -1, 'redir' => 1);
     $app['targets']['git'] = array('name' => 'GIT', 'url' => 'https://github.com/red-eclipse/', 'alturl' => 'https://github.com/red-eclipse/', 'nav' => -1, 'redir' => 1);
+
     $app['targets']['apply'] = array('name' => 'Apply', 'url' => 'https://docs.google.com/forms/d/1ZuvNFCIivYY_b5YLpCa_pnsbdR4oRdPplIkcbBexCDU/viewform', 'nav' => -1, 'redir' => 1);
     $app['targets']['guidelines'] = array('name' => 'Guidelines', 'url' => 'https://redeclipse.net/wiki/Multiplayer_Guidelines', 'nav' => -1, 'redir' => 1);
     $app['targets']['trademark'] = array('name' => 'Trademark', 'url' => 'https://redeclipse.net/wiki/Trademark_Policy', 'nav' => -1, 'redir' => 1);
