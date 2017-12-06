@@ -17,8 +17,8 @@ RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/mediawiki/index.php [QSA,L,NC]
 
 RewriteRule ^home$ https://redeclipse.net/ [R=301,L,NC]
 
-RewriteRule ^(appimage|download|torrent|tracker|svn|git|gamejolt|google|facebook|youtube|stats)/(.+)$ /bits/index.php?target=$1&title=$2 [QSA,L,NC]
-RewriteRule ^(appimage|tracker|servers|stats|download|torrent|chat|svn|git|google|facebook|youtube|itchio|desura|indiedb|gamejolt|devel|guidelines|faq|guide|install|contribute|trademark|license|readme|apply|donate|forums)$ /bits/index.php?target=$1 [QSA,L,NC]
+RewriteRule ^(appimage|download|torrent|tracker|svn|git|google|youtube|stats)/(.+)$ /bits/index.php?target=$1&title=$2 [QSA,L,NC]
+RewriteRule ^(appimage|tracker|servers|stats|download|torrent|chat|svn|git|google|facebook|youtube|itchio|desura|indiedb|gamejolt|devel|guidelines|faq|guide|install|contribute|trademark|license|readme|apply|patreon|donate|forums)$ /bits/index.php?target=$1 [QSA,L,NC]
 RewriteRule ^(sitemap|sitemap.xml)$ /bits/sitemap.xml [QSA,L,NC]
 RewriteRule ^favicon.ico$ /bits/favicon.ico [QSA,L,NC]
 RewriteRule ^$ /bits/index.php [QSA,L,NC]

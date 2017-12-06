@@ -18,6 +18,7 @@
     $app['targets']['torrent'] = $app['targets']['download'];
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
+    $app['targets']['patreon'] = array('name' => 'Patreon', 'url' => 'https://www.patreon.com/redeclipsenet', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'https://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'https://redeclipse.net/forum/index.php', 'alturl' => 'https://redeclipse.net/forum/index.php?t=', 'nav' => 1, 'redir' => 1);
     $app['targets']['wiki'] = array('name' => 'Wiki', 'url' => 'https://redeclipse.net/wiki/', 'alturl' => 'https://redeclipse.net/wiki/', 'nav' => 1, 'redir' => 1);
@@ -244,7 +245,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 support">
                     <h4>Support Us</h4>
-                    <p id="donatemsg">Red Eclipse is developed by volunteers, and you get it free of charge; your contributions keep this project alive. You're encouraged to get involved with the community and <a href="/contribute">help evolve the game</a>, or <a href="/donate">donate to our worthy cause</a>.</p>
+                    <p id="donatemsg">Red Eclipse is developed by volunteers, and you get it free of charge; your contributions keep this project alive. You're encouraged to get involved with the community and <a href="/contribute">help evolve the game</a>, <a href="/donate">donate to our worthy cause</a>, or <a href="/patreon">subscribe to our Patreon</a>.</p>
                 </div>
             </div>
             <div class="row footer">
