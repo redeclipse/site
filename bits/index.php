@@ -50,7 +50,7 @@
     $app['targets']['tracker'] = array('name' => 'Tracker', 'url' => 'https://github.com/red-eclipse/base/issues', 'alturl' => 'https://github.com/red-eclipse/base/issues/', 'nav' => 0, 'redir' => 1);
     $app['targets']['forums'] = array('name' => 'Forums', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 0, 'redir' => 1);
     $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 0, 'redir' => 1);
-    $app['targets']['oldforum'] = array('name' => 'Old Forum', 'url' => 'https://redeclipse.net/forum/index.php', 'alturl' => 'https://redeclipse.net/forum/index.php?t=', 'nav' => 0, 'redir' => 1);
+    $app['targets']['oldforum'] = array('name' => 'Old Forum', 'url' => 'https://redeclipse.net/oldforum/index.php', 'alturl' => 'https://redeclipse.net/oldforum/index.php?t=', 'nav' => 0, 'redir' => 1);
 
     $app['remaps']['indiedb'] = 'gamejolt';
 
