@@ -9,7 +9,7 @@
     $app['screenshots'] = 84;
 
     $app['banner'] = $app['releasefull']." (".$app['releasedate'].")";
-    $app['bannerurl'] = "https://redeclipse.net/forum/viewtopic.php?f=8&t=638";
+    $app['bannerurl'] = "https://redeclipse.net/oldforum/viewtopic.php?f=8&t=638";
 
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
 
@@ -20,7 +20,8 @@
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['patreon'] = array('name' => 'Patreon', 'url' => 'https://www.patreon.com/redeclipsenet', 'alturl' => '', 'nav' => 1, 'redir' => 1);
     $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'https://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
-    $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'https://redeclipse.net/forum/index.php', 'alturl' => 'https://redeclipse.net/forum/index.php?t=', 'nav' => 1, 'redir' => 1);
+    $app['targets']['discuss'] = array('name' => 'Discuss', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 1, 'redir' => 1);
+    $app['targets']['issues'] = array('name' => 'Issues', 'url' => 'https://github.com/red-eclipse/base/issues', 'alturl' => 'https://github.com/red-eclipse/base/issues/', 'nav' => 1, 'redir' => 1);
     $app['targets']['wiki'] = array('name' => 'Wiki', 'url' => 'https://redeclipse.net/wiki/', 'alturl' => 'https://redeclipse.net/wiki/', 'nav' => 1, 'redir' => 1);
     $app['targets']['faq'] = array('name' => 'FAQ', 'url' => 'https://redeclipse.net/wiki/FAQ_for_Red_Eclipse', 'nav' => 1, 'redir' => 1);
     $app['targets']['guide'] = array('name' => 'Guide', 'url' => 'https://redeclipse.net/wiki/Guide', 'nav' => 1, 'redir' => 1);
@@ -45,8 +46,11 @@
     $app['targets']['devel'] = array('name' => 'Devel', 'url' => 'https://redeclipse.net/wiki/Obtain_development_version', 'nav' => -1, 'redir' => 1);
     $app['targets']['license'] = array('name' => 'License', 'url' => 'https://redeclipse.net/wiki/License', 'nav' => -1, 'redir' => 1);
     $app['targets']['readme'] = array('name' => 'Readme', 'url' => 'https://redeclipse.net/wiki/Readme', 'nav' => -1, 'redir' => 1);
-    $app['targets']['tracker'] = array('name' => 'Tracker', 'url' => 'https://redeclipse.net/forum/viewforum.php?f=9', 'alturl' => 'https://redeclipse.net/forum/viewforum.php?f=9&t=', 'nav' => 0, 'redir' => 1);
-    $app['targets']['forums'] = array('name' => 'Forums', 'url' => 'https://redeclipse.net/forum/index.php', 'alturl' => 'https://redeclipse.net/forum/index.php?t=', 'nav' => 0, 'redir' => 1);
+    
+    $app['targets']['tracker'] = array('name' => 'Tracker', 'url' => 'https://github.com/red-eclipse/base/issues', 'alturl' => 'https://github.com/red-eclipse/base/issues/', 'nav' => 0, 'redir' => 1);
+    $app['targets']['forums'] = array('name' => 'Forums', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 0, 'redir' => 1);
+    $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 0, 'redir' => 1);
+    $app['targets']['oldforum'] = array('name' => 'Old Forum', 'url' => 'https://redeclipse.net/forum/index.php', 'alturl' => 'https://redeclipse.net/forum/index.php?t=', 'nav' => 0, 'redir' => 1);
 
     $app['remaps']['indiedb'] = 'gamejolt';
 
@@ -197,7 +201,7 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-right:0;">Help &amp; Support<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a> <a href="/forums">Discussion Forums</a> <a href="/chat">Live Chat</a></li>
+                                <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a> <a href="/discuss">Discussions</a> <a href="/chat">Live Chat</a></li>
                             </ul>
                         </div>
                     </div>
@@ -236,12 +240,12 @@
             </div>
             <div class="row texte">
                 <div class="col-xs-12 col-sm-4 col-md-4">
-                    <p>Red Eclipse is a fun-filled new take on the first person arena shooter, built as a total conversion of <a href="http://www.cubeengine.com/">Cube Engine 2</a>, which lends itself toward a balanced gameplay, with a general theme of agility in a variety of environments. For more information, please see our <a href="/wiki">Wiki</a> or <a href="/forum">Forums</a>.</p>
+                    <p>Red Eclipse is a fun-filled new take on the first person arena shooter, built as a total conversion of <a href="http://www.cubeengine.com/">Cube Engine 2</a>, which lends itself toward a balanced gameplay, with a general theme of agility in a variety of environments. For more information, please see our <a href="/wiki">Wiki</a> or <a href="/discuss">Discussions</a>.</p>
                     <p>The project is a <i>Free and Open Source</i> game, built on <a href="http://www.cubeengine.com/">Cube Engine 2</a> using <a href="http://libsdl.org/">SDL</a> and <a href="http://opengl.org/">OpenGL</a> which allows it to be ported to many platforms; you can <a href="/download">download a package</a> for <i>Windows, GNU/Linux, BSD, and MacOS</i>, or grab a development copy from our <a href="/devel">Github</a> repository and live on the bleeding edge.</p>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <p>In a true open source <i>by the people for the people</i> nature, we try to work closely with the gaming and open source communities to provide a better overall experience, aiming to create a game environment that is fun and easy to play, while still having elements to master.</p>
-                    <p>If you think you might have something to contribute to the game or community, please feel free to drop by our <a href="/chat">Chat</a> or <a href="/forum">Forums</a> and talk to us directly. We try to maintain a standard of friendly behaviour in our community, so don't be afraid to speak up and have your say in building this game for us all!</p>
+                    <p>If you think you might have something to contribute to the game or community, please feel free to drop by our <a href="/chat">Chat</a> or <a href="/discuss">Discussions</a> and talk to us directly. We try to maintain a standard of friendly behaviour in our community, so don't be afraid to speak up and have your say in building this game for us all!</p>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 support">
                     <h4>Support Us</h4>
