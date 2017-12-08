@@ -16,7 +16,7 @@ RewriteRule ^appimage/(.+)/(.+)$ https://github.com/red-eclipse/deploy/releases/
 RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/mediawiki/index.php [QSA,L,NC]
 
 RewriteRule ^home$ https://redeclipse.net/ [R=301,L,NC]
-RewriteRule ^forum/index.(.+)$ /oldforum/index.$1 [R=301,L,NC]
+RewriteRule ^forum/(.+).php?(.+)$ /oldforum/$1.php?$2 [R=301,L,NC]
 
 RewriteRule ^(appimage|download|torrent|tracker|issues|svn|git|google|youtube|stats|discuss|forum|forums|reddit)/(.+)$ /bits/index.php?target=$1&title=$2 [QSA,L,NC]
 RewriteRule ^(appimage|download|torrent|tracker|issues|svn|git|google|youtube|stats|discuss|forum|forums|reddit)/$ /bits/index.php?target=$1 [QSA,L,NC]
