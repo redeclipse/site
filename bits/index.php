@@ -35,6 +35,7 @@
     $app['targets']['itchio'] = array('name' => 'Itch.io', 'url' => 'https://redeclipse.itch.io/red-eclipse', 'nav' => 0, 'redir' => 1);
     $app['targets']['gamejolt'] = array('name' => 'Gamejolt', 'url' => 'https://gamejolt.com/games/red-eclipse/73896', 'alturl' => 'https://gamejolt.com/games/red-eclipse/73896/', 'nav' => 0, 'redir' => 1);
     $app['targets']['google'] = array('name' => 'Google', 'url' => 'https://www.google.com/search?q=%22Red%20Eclipse%22', 'alturl' => 'https://www.google.com/search?q=%22Red%20Eclipse%22+', 'nav' => -1, 'redir' => 1);
+    $app['targets']['reddit'] = array('name' => 'Reddit', 'url' => 'https://reddit.com/r/Red_Eclipse', 'nav' => 0, 'redir' => 1);
 
     $app['targets']['appimage'] = array('name' => 'AppImage', 'url' => 'https://github.com/red-eclipse/deploy/releases', 'alturl' => 'https://github.com/red-eclipse/deploy/releases/tag/appimage_continuous_', 'nav' => -1, 'redir' => 1);
     $app['targets']['svn'] = array('name' => 'SVN', 'url' => 'https://github.com/red-eclipse/', 'alturl' => 'https://svn.icculus.org/redeclipse/?view=rev&revision=', 'nav' => -1, 'redir' => 1);
@@ -201,7 +202,7 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-right:0;">Help &amp; Support<span class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a> <a href="/discuss">Discussions</a> <a href="/chat">Live Chat</a></li>
+                                <li><a href="/faq">FAQs</a> <a href="/install">Installing the Game</a> <a href="/guide">Gameplay Guide</a> <a href="/devel">Development Version</a> <a href="/discuss">Discussions</a> <a href="/reddit">Reddit Page</a> <a href="/chat">Live Chat</a></li>
                             </ul>
                         </div>
                     </div>
@@ -266,8 +267,8 @@
                 </div>
             </div>
             <div id="copyright" style="text-align: center">
-                <p>Red Eclipse, Copyright &copy; 2009-2016 Quinton Reeves, Lee Salzman</p>
-                <p>Cube Engine 2, Copyright &copy; 2001-2016 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</p>
+                <p>Red Eclipse, Copyright &copy; 2009-2017 Quinton Reeves, Lee Salzman</p>
+                <p>Cube Engine 2, Copyright &copy; 2001-2017 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</p>
                 <p><a href="http://remiclouet.com" target="_blank">Website by R&eacute;mi Clouet d'Orval</a></p>
             </div>
         </div>
