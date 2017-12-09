@@ -11,15 +11,15 @@
     $app['banner'] = $app['releasefull']." (".$app['releasedate'].")";
     $app['bannerurl'] = "https://redeclipse.net/oldforum/viewtopic.php?f=8&t=638";
 
-    $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'alturl' => '', 'nav' => -1, 'redir' => 0));
+    $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'nav' => -1, 'redir' => 0));
 
     // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'].'/', 'nav' => 0, 'redir' => 1);
     $app['targets']['torrent'] = $app['targets']['download'];
 
-    $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'alturl' => '', 'nav' => 1, 'redir' => 1);
-    $app['targets']['patreon'] = array('name' => 'Patreon', 'url' => 'https://www.patreon.com/redeclipsenet', 'alturl' => '', 'nav' => 1, 'redir' => 1);
-    $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'https://webchat.freenode.net/?channels=redeclipse', 'alturl' => '', 'nav' => 1, 'redir' => 1);
+    $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'nav' => 1, 'redir' => 1);
+    $app['targets']['patreon'] = array('name' => 'Patreon', 'url' => 'https://www.patreon.com/redeclipsenet', 'nav' => 1, 'redir' => 1);
+    $app['targets']['chat'] = array('name' => 'Chat', 'url' => 'https://webchat.freenode.net/?channels=redeclipse', 'nav' => 1, 'redir' => 1);
     $app['targets']['discuss'] = array('name' => 'Discuss', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 1, 'redir' => 1);
     $app['targets']['issues'] = array('name' => 'Issues', 'url' => 'https://github.com/red-eclipse/base/issues', 'alturl' => 'https://github.com/red-eclipse/base/issues/', 'nav' => 1, 'redir' => 1);
     $app['targets']['wiki'] = array('name' => 'Wiki', 'url' => 'https://redeclipse.net/wiki/', 'alturl' => 'https://redeclipse.net/wiki/', 'nav' => 1, 'redir' => 1);
@@ -51,7 +51,6 @@
     $app['targets']['tracker'] = array('name' => 'Tracker', 'url' => 'https://github.com/red-eclipse/base/issues', 'alturl' => 'https://github.com/red-eclipse/base/issues/', 'nav' => 0, 'redir' => 1);
     $app['targets']['forums'] = array('name' => 'Forums', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 0, 'redir' => 1);
     $app['targets']['forum'] = array('name' => 'Forum', 'url' => 'https://github.com/red-eclipse/world/issues', 'alturl' => 'https://github.com/red-eclipse/world/issues/', 'nav' => 0, 'redir' => 1);
-    $app['targets']['oldforum'] = array('name' => 'Old Forum', 'url' => 'https://redeclipse.net/oldforum/index.php', 'alturl' => 'https://redeclipse.net/oldforum/index.php?t=', 'nav' => 0, 'redir' => 1);
 
     $app['remaps']['indiedb'] = 'gamejolt';
 
