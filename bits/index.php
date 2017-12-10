@@ -9,7 +9,7 @@
     $app['screenshots'] = 84;
 
     $app['banner'] = $app['releasefull']." (".$app['releasedate'].")";
-    $app['bannerurl'] = "https://redeclipse.net/oldforum/viewtopic.php?f=8&t=638";
+    $app['bannerurl'] = "https://redeclipse.net/oldforum/viewtopic.php?f=8&t=1133";
 
     $app['targets'] = array('home' => array('name' => '', 'url' => '/', 'nav' => -1, 'redir' => 0));
 
