@@ -15,6 +15,7 @@
 
     // nav items should be in reverse order for the top navbar
     $app['targets']['download'] = array('name' => 'Download', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'].'/', 'nav' => 0, 'redir' => 1);
+    $app['targets']['releases'] = array('name' => 'Releases', 'url' => 'https://github.com/red-eclipse/base/releases/tag/v'.$app['releasever'], 'alturl' => 'https://github.com/red-eclipse/base/releases/download/v'.$app['releasever'].'/', 'nav' => 0, 'redir' => 1);
     $app['targets']['torrent'] = $app['targets']['download'];
 
     $app['targets']['donate'] = array('name' => 'Donate', 'url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E77G49C2X4WXN', 'nav' => 1, 'redir' => 1);
@@ -89,8 +90,11 @@
 
     $title = checkarg("title");
     if ($app['targets'][$app['target']]['redir']) {
-        if ((($app['target'] == "download") || ($app['target'] == "torrent")) && ($title != "")) {
-            if (isset($app['download'][$title])) {
+        if (($app['target'] == "download") || ($app['target'] == "torrent")) {
+            if (($title == "") && ($app['platform'] != "")) {
+                $title = $app['platform'];
+            }
+            if (($title != "") && (isset($app['download'][$title]))) {
                 if ($app['target'] == "torrent") $title = $app['download'][$title].'.torrent';
                 else $title = $app['download'][$title];
             }

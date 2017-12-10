@@ -20,7 +20,7 @@ RewriteRule ^/?wiki(/.*)?$ /mediawiki/index.php [QSA,L,NC]
 RewriteRule ^/?forum/(.*).php$ /oldforum/$1.php [R=301,QSA,L,NC]
 RewriteRule ^/?(base|bonus|community|deploy|maps|textures|world)/?(.*)?$ https://github.com/red-eclipse/$1/$2 [R=302,QSA,L,NC]
 
-RewriteRule ^/?(appimage|tracker|issues|servers|stats|download|torrent)/?(.+)?$ /bits/index.php?target=$1&title=$2 [L,NC]
+RewriteRule ^/?(appimage|tracker|issues|servers|stats|download|releases|torrent)/?(.+)?$ /bits/index.php?target=$1&title=$2 [L,NC]
 RewriteRule ^/?(git|google|facebook|youtube|itchio|gamejolt|devel|apply|patreon|donate|discuss|forum|forums|reddit)/?(.+)?$ /bits/index.php?target=$1&title=$2 [L,NC]
 RewriteRule ^/?(chat|discuss|forum|forums|reddit|patreon|donate)/?(.+)?$ /bits/index.php?target=$1&title=$2 [L,NC]
 RewriteRule ^/?(guidelines|faq|guide|install|contribute|trademark|license|readme)/?(.+)?$ /bits/index.php?target=$1&title=$2 [L,NC]
