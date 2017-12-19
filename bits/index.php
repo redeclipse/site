@@ -1,5 +1,5 @@
 <?php
-    $app['releasever'] = "1.5.9";
+    $app['releasever'] = "1.5.8";
     $app['releasename'] = "Elysium Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
     $app['releasefile'] = "redeclipse_".$app['releasever']."_";
