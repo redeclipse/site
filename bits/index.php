@@ -1,9 +1,9 @@
 <?php
-    $app['releasever'] = "1.5.8";
-    $app['releasename'] = "Elysium Edition";
+    $app['releasever'] = "1.6.0";
+    $app['releasename'] = "Sunset Edition";
     $app['releasefull'] = "v".$app['releasever']." \"".$app['releasename']."\"";
     $app['releasefile'] = "redeclipse_".$app['releasever']."_";
-    $app['releasedate'] = "14th December 2017";
+    $app['releasedate'] = "21st December 2017";
     $app['background'] = "/bits/background_01.jpg";
     $app['youtubevid'] = "oJRZHjyj7Zg";
     $app['screenshots'] = 84;
