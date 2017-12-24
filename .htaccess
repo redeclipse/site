@@ -16,6 +16,4 @@ RewriteRule ^/?appimage/(.*)/(.*)$ https://github.com/red-eclipse/deploy/release
 RewriteRule ^/?(base|bonus|community|deploy|maps|textures|world)/?(.*)?$ https://github.com/red-eclipse/$1/$2 [R=302,QSA,L,NC]
 
 RewriteCond %{REQUEST_URI} !^/?(oldforum|mediawiki|favicon.ico)(/.*)?$
-RewriteRule ^/?(.*)/(.*)$ http://www.redeclipse.net/$1/$2 [R=301,L,NC]
-RewriteCond %{REQUEST_URI} !^/?(oldforum|mediawiki|favicon.ico)(/.*)?$
 RewriteRule ^/?(.*)$ http://www.redeclipse.net/$1 [R=301,L,NC]
