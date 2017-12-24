@@ -17,4 +17,5 @@ RewriteRule ^/?(base|bonus|community|deploy|maps|textures|world)/?(.*)?$ https:/
 
 RewriteCond %{REQUEST_URI} !^/?(oldforum|mediawiki|favicon.ico)(/.*)?$
 RewriteRule ^/?(.*)/(.*)$ http://www.redeclipse.net/$1/$2 [R=301,L,NC]
+RewriteCond %{REQUEST_URI} !^/?(oldforum|mediawiki|favicon.ico)(/.*)?$
 RewriteRule ^/?(.*)$ http://www.redeclipse.net/$1 [R=301,L,NC]
