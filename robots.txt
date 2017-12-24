@@ -2,7 +2,6 @@ User-agent: *
 Disallow: /mediawiki/
 User-agent: *
 Disallow: /files/
-Sitemap: http://redeclipse.net/sitemap
 User-agent: AhrefsBot
 Disallow: /
 
