@@ -27,5 +27,5 @@ RewriteRule ^/?torrent/(mac|macos|macosx|osx)/?$ https://github.com/red-eclipse/
 RewriteRule ^/?torrent/combined/?$ https://github.com/red-eclipse/base/releases/download/v1.6.0/redeclipse_1.6.0_combined.tar.bz2.torrent [R=302,L,NC]
 RewriteRule ^/?torrent/zip/?$ https://github.com/red-eclipse/base/releases/download/v1.6.0/redeclipse_1.6.0_win.zip.torrent [R=302,L,NC]
 
-RewriteCond %{REQUEST_URI} !^/?(oldforum|mediawiki|favicon.ico)(/.*)?$
+RewriteCond %{REQUEST_URI} !^/?(files|oldforum|mediawiki|favicon.ico)(/.*)?$
 RewriteRule ^/?(.*)$ http://www.redeclipse.net/$1 [R=302,L,NC]
