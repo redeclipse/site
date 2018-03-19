@@ -4,8 +4,12 @@ php_value upload_max_filesize 32M
 php_value post_max_size 32M
 
 RewriteEngine on
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://redeclipse.net/$1 [R,L]
+
 RewriteCond %{HTTP_HOST} ^play.redeclipse.net$
-RewriteRule ^(.*)$ http://redeclipse.net/$1 [R=301,L,NC]
+RewriteRule ^(.*)$ https://redeclipse.net/$1 [R=301,L,NC]
 
 RewriteRule ^/?$ http://www.redeclipse.net/ [R=301,L,NC]
 RewriteRule ^/?home$ http://www.redeclipse.net/ [R=301,L,NC]
@@ -27,5 +31,5 @@ RewriteRule ^/?torrent/(mac|macos|macosx|osx)/?$ https://github.com/red-eclipse/
 RewriteRule ^/?torrent/combined/?$ https://github.com/red-eclipse/base/releases/download/v1.6.0/redeclipse_1.6.0_combined.tar.bz2.torrent [R=302,L,NC]
 RewriteRule ^/?torrent/zip/?$ https://github.com/red-eclipse/base/releases/download/v1.6.0/redeclipse_1.6.0_win.zip.torrent [R=302,L,NC]
 
-RewriteCond %{REQUEST_URI} !^/?(files|oldforum|mediawiki|favicon.ico)(/.*)?$
+RewriteCond %{REQUEST_URI} !^/?(bits|files|oldforum|mediawiki|favicon.ico)(/.*)?$
 RewriteRule ^/?(.*)$ http://www.redeclipse.net/$1 [R=302,L,NC]
