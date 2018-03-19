@@ -1,12 +1,11 @@
+*.bak
 *~
 .directory
 .DS_Store
 *.orig
-*.core
-*.diff
-*.patch
-*.out
-.gitattributes
+*.rej
+*.bak
+*.kate-swp
 google*.html
 oldforum/config.php
 oldforum/cache/*
