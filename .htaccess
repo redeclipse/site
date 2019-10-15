@@ -14,10 +14,8 @@ RewriteRule ^(.*)$ https://redeclipse.net/$1 [R=301,L,NC]
 RewriteRule ^/?$ https://www.redeclipse.net/ [R=301,L,NC]
 RewriteRule ^/?home$ https://www.redeclipse.net/ [R=301,L,NC]
 
-RewriteRule ^/?wiki(/.*)?$ /mediawiki/index.php [QSA,L,NC]
 RewriteRule ^/?forum/(.*).php$ /oldforum/$1.php [R=301,QSA,L,NC]
 RewriteRule ^/?appimage/(.*)/(.*)$ https://github.com/redeclipse/deploy/releases/download/appimage_continuous_$1/$2 [R=302,L,NC]
-RewriteRule ^/?stats/?(.*)?$ http://play.redeclipse.net:28700/$1 [R=302,L,NC]
 RewriteRule ^/?(base|bonus|community|deploy|maps|textures|world)/?(.*)?$ https://github.com/redeclipse/$1/$2 [R=302,QSA,L,NC]
 
 RewriteRule ^/?download/(win|windows)/?$ https://github.com/redeclipse/base/releases/download/v1.6.0/redeclipse_1.6.0_win.exe [R=302,L,NC]
